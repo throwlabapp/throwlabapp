@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThrowLab Support: Filming, Tracking, and Analysis Help</title>
+  <meta name="description" content="Get help filming and analyzing disc golf throws with ThrowLab, including slow-motion video, tracking, subscriptions, purchases, and refunds.">
+  <meta name="theme-color" content="#050b18">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://throwlabapp.com/support/">
+  <link rel="icon" href="../assets/app-icon.png">
+  <link rel="apple-touch-icon" href="../assets/app-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="subpage">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav shell" aria-label="Main navigation"><a class="brand" href="../"><img src="../assets/throwlab-mark-clean.png" alt="" width="35" height="22"><span>ThrowLab</span></a><div class="nav-links" id="nav-links"><a href="../#how-it-works">How it works</a><a href="../#accuracy">Best results</a><a href="../support/" aria-current="page">Support</a></div><div class="nav-right"><a class="nav-cta" href="https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743">Get ThrowLab</a><button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button></div></nav></header>
+  <main id="main" class="page-wrap">
+    <header class="page-hero"><p class="kicker">ThrowLab support</p><h1>Get a cleaner analysis.</h1><p class="meta">If a throw cannot be analyzed, the cause is usually the video speed, camera position, or selected frame. Start with these checks. If the problem continues, email me and I’ll take a look.</p></header>
+    <div class="contact-card"><div><strong>Contact the developer</strong><p>Include your iPhone model, iOS version, ThrowLab version, and what happened.</p></div><a class="email" href="mailto:support@throwlabapp.com">support@throwlabapp.com</a></div>
+
+    <p class="kicker">Quick checks</p>
+    <h2>Before running the analysis again</h2>
+    <div class="support-grid">
+      <article class="support-card"><h3>Use Slo-mo mode</h3><p>Record at 240 fps when available. ThrowLab also supports 120 fps video. A regular-speed clip may not contain enough frames for a reliable analysis.</p></article>
+      <article class="support-card"><h3>Film from the side</h3><p>Keep the phone roughly perpendicular to the intended throwing line and use landscape orientation.</p></article>
+      <article class="support-card"><h3>Trim to the throw</h3><p>Begin shortly before release and end shortly after the disc exits the frame. Long wind-ups or follow-throughs can make the starting frame less useful.</p></article>
+      <article class="support-card"><h3>Choose mid-flight</h3><p>On the Find the disc screen, scrub until the disc is out of the hand, visible, and roughly halfway across its flight through the frame.</p></article>
+    </div>
+
+    <p class="kicker">Analysis and billing</p>
+    <h2>More help with ThrowLab</h2>
+    <div class="faq">
+      <details open><summary>Why did ThrowLab withhold power match or disc angle?</summary><p>ThrowLab withholds a result when the tracked frames do not provide enough consistent evidence. This can happen when the disc is hidden by your hand, severely blurred, edge-on, very small, or hard to separate from a busy background. Try selecting a clearer mid-flight frame before recording a new throw.</p></details>
+      <details><summary>What do the disc-angle labels mean?</summary><p>Flat is the neutral range. Slightly hyzer and slightly anhyzer describe modest release angles, while hyzer and anhyzer describe stronger ones. Your throw style determines which direction is read as hyzer or anhyzer.</p></details>
+      <details><summary>Why can’t I add a new disc?</summary><p>Adding a disc requires an internet connection so ThrowLab can search the disc catalog and load its flight ratings. Discs already saved in your bag remain available.</p></details>
+      <details><summary>How do I cancel or restore a subscription?</summary><p>To cancel, open iPhone Settings, tap your name, then Subscriptions. To restore an active subscription after reinstalling, use Restore Purchases in ThrowLab while signed into the same Apple Account.</p></details>
+      <details><summary>How do I request a refund?</summary><p>Apple processes all purchases and refund requests. Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> and sign in with the Apple Account used for the purchase.</p></details>
+    </div>
+  </main>
+  <footer class="footer shell"><div class="footer-brand"><img src="../assets/throwlab-mark-clean.png" alt="" width="32" height="20"><span><strong>ThrowLab</strong><small>Disc golf release analysis for iPhone</small></span></div><div class="footer-links"><a href="../support/">Support</a><a href="../privacy/">Privacy</a><a href="../terms/">Terms</a></div><p>Measurements are estimates. Throw safely.</p></footer>
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }));
+    }
+  </script>
+</body>
+</html>
