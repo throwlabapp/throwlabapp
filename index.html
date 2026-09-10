@@ -1,110 +1,343 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ThrowLab — Disc golf throw analysis</title>
-  <meta name="description" content="Film a side-view throw. ThrowLab reads power, disc angle, and release path—tuned to each disc’s speed, glide, turn, and fade.">
+  <title>Disc Golf Analysis App for iPhone | ThrowLab</title>
+  <meta name="description" content="Analyze disc golf throws on iPhone. See your power match, disc and launch angles, predicted flight, personalized coaching, and recommended disc fit.">
+  <meta name="theme-color" content="#050b18">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="ThrowLab">
+  <link rel="canonical" href="https://throwlabapp.com/">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ThrowLab">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="ThrowLab | Disc Golf Analysis App for iPhone">
+  <meta property="og:description" content="See how your release fits your disc with slow-motion analysis of power match, disc angle, release path, and predicted early flight.">
+  <meta property="og:url" content="https://throwlabapp.com/">
+  <meta property="og:image" content="assets/analysis.png">
+  <meta property="og:image:alt" content="ThrowLab analysis screen showing Slightly low power match, Hyzer disc angle, and predicted flight">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ThrowLab | Disc Golf Analysis App">
+  <meta name="twitter:description" content="Analyze power match, disc angle, and release path, then see how your release is likely to shape the early flight.">
+  <meta name="twitter:image" content="assets/analysis.png">
+  <link rel="icon" href="assets/app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+  <link rel="preload" as="image" href="assets/analysis.png" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ThrowLab",
+    "applicationCategory": "SportsApplication",
+    "operatingSystem": "iOS",
+    "url": "https://throwlabapp.com/",
+    "downloadUrl": "https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743",
+    "alternateName": ["disc golf throw analyzer", "disc golf video analyzer"],
+    "description": "A disc golf analysis app for iPhone that analyzes slow-motion video for power match, disc angle, release path, and predicted early flight, with coaching based on the selected disc.",
+    "offers": [
+      {"@type": "Offer", "name": "ThrowLab Pro monthly", "price": "4.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock"},
+      {"@type": "Offer", "name": "ThrowLab Pro yearly", "price": "39.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}
+    ],
+    "image": "assets/app-icon.png",
+    "screenshot": "assets/analysis.png",
+    "featureList": [
+      "Disc-specific power matching",
+      "Hyzer, flat, and anhyzer release classification",
+      "Upward, flat, and downward release-path classification",
+      "Predicted flight and next-throw coaching",
+      "On-device video analysis with Apple Vision",
+      "No accounts, servers, or tracking"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does a disc golf analysis app measure?",
+        "acceptedAnswer": {"@type": "Answer", "text": "ThrowLab estimates power match, disc angle, and release path from slow-motion video. It combines those readings with the selected disc’s flight ratings and throw style to describe the likely flight and suggest what to change next."}
+      },
+      {
+        "@type": "Question",
+        "name": "What do hyzer, flat, and anhyzer mean in disc golf?",
+        "acceptedAnswer": {"@type": "Answer", "text": "On a hyzer release, the disc’s outer edge—the edge farthest from your body—is lower than the inner edge. On an anhyzer release, the outer edge is higher. A flat release sits between them. ThrowLab interprets the angle using your throwing side and whether you throw backhand or forehand."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does ThrowLab work for forehand and left-handed throws?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. ThrowLab supports right-hand backhand, right-hand forehand, left-hand backhand, and left-hand forehand. Your selected throw style helps the app interpret hyzer and anhyzer correctly and describe the expected flight direction."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use ThrowLab when throwing into a net?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. ThrowLab reads the release and early flight, so the disc does not need to land on camera. Keep the disc visible for several frames after it leaves your hand."}
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a radar gun, sensor disc, or stickers?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No. ThrowLab uses slow-motion video from your iPhone. You select the disc from your bag and center it in one mid-flight frame before analysis."}
+      },
+      {
+        "@type": "Question",
+        "name": "Why does the selected disc matter?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Different molds are designed for different speeds and flight shapes. ThrowLab uses speed and category for power matching, while turn and fade help explain the predicted flight and disc-fit guidance."}
+      },
+      {
+        "@type": "Question",
+        "name": "Is ThrowLab analyzing my body mechanics?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No. ThrowLab is focused on the disc at and immediately after release. It does not score reach-back, footwork, brace, or hip rotation."}
+      },
+      {
+        "@type": "Question",
+        "name": "Are videos uploaded to a server?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No. Throw videos are analyzed on your iPhone and are not uploaded for analysis. ThrowLab does not require an account."}
+      },
+      {
+        "@type": "Question",
+        "name": "How much does ThrowLab Pro cost?",
+        "acceptedAnswer": {"@type": "Answer", "text": "ThrowLab Pro is $4.99 per month or $39.99 per year after a 3-day free trial. Apple charges your Apple Account when the trial ends unless you cancel at least 24 hours before renewal."}
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to film a throw for ThrowLab",
+    "description": "Record a landscape slow-motion side view so ThrowLab can read power match, disc angle, and release path.",
+    "step": [
+      {"@type": "HowToStep", "name": "Record in Slo-mo", "text": "Use 240 fps slow motion when available. ThrowLab also supports 120 fps video."},
+      {"@type": "HowToStep", "name": "Film landscape from the side", "text": "Keep the camera roughly perpendicular to the intended line and leave room for the disc to travel across frame."},
+      {"@type": "HowToStep", "name": "Trim to the throw", "text": "Start shortly before release and end shortly after the disc leaves the frame."},
+      {"@type": "HowToStep", "name": "Center the disc", "text": "On the Find the disc screen, scrub to mid-flight and keep the disc fully inside the circle."}
+    ]
+  }
+  </script>
 </head>
 <body>
-  <nav class="nav">
-    <a class="nav-brand" href="index.html">
-      <span class="nav-logo">🥏</span>
-      ThrowLab
-    </a>
-    <div class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="support.html">Support</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="hero-icon">🥏</div>
-    <div class="eyebrow">Disc golf throw analysis</div>
-    <h1>Your throw, read frame by<br>frame.</h1>
-    <p class="hero-sub">Film a side-view throw. ThrowLab reads power, disc angle, and release path—tuned to each disc’s speed, glide, turn, and fade.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="https://apps.apple.com">Coming to the App Store</a>
-      <a class="btn btn-ghost" href="support.html">Get support</a>
-    </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="ThrowLab home">
+        <img src="assets/throwlab-mark-clean.png" alt="" width="35" height="22">
+        <span>ThrowLab</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#how-it-works">How it works</a>
+        <a href="#accuracy">Best results</a>
+        <a href="support.html">Support</a>
+      </div>
+      <div class="nav-right">
+        <a class="nav-cta" href="https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743">Get ThrowLab</a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
   </header>
 
-  <div class="wrap">
-    <section>
-      <div class="section-label">What it reads</div>
-      <h2>Four numbers that actually change a throw</h2>
-      <div class="grid-2" style="margin-top: 24px;">
-        <div class="card">
-          <div class="card-num">01</div>
+  <main id="main">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <h1 class="kicker"><span></span> Disc golf analysis app for iPhone</h1>
+        <p class="hero-headline">Analyze your release.<em>Throw farther.</em></p>
+        <p class="hero-lead">Analyze your release, understand the flight, and know what to change next. ThrowLab measures power, disc angle, and launch angle against the disc you threw, then gives you practical coaching and a better disc fit when needed.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743">Start 3-day free trial</a>
+          <a class="text-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
+        </div>
+        <ul class="trust-list" aria-label="Product details">
+          <li>Coaching for the next throw</li>
+          <li>Works in a net or on the field</li>
+          <li>Your videos stay on your iPhone</li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <figure class="phone phone-main">
+          <img src="assets/analysis.png" alt="ThrowLab analysis of a Firebird showing slightly low power match, hyzer disc angle, slightly upward release path, and a predicted early fade" width="946" height="2048" fetchpriority="high" decoding="async">
+        </figure>
+        <div class="result-chip chip-one"><span class="dot yellow"></span><small>POWER MATCH</small><strong>Slightly low</strong></div>
+        <div class="result-chip chip-two"><span class="dot red"></span><small>DISC ANGLE</small><strong>Hyzer</strong></div>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="ThrowLab analysis categories">
+      <div class="shell proof-grid">
+        <span>Power match</span><i></i><span>Disc angle</span><i></i><span>Release path</span><i></i><span>Predicted flight</span><i></i><span>Disc fit</span>
+      </div>
+    </section>
+
+    <section class="section shell" id="how-it-works">
+      <div class="section-heading compact">
+        <p class="kicker">How it works</p>
+        <h2>From slow-motion video to a next-throw plan.</h2>
+      </div>
+      <div class="steps-layout">
+        <figure class="phone phone-finder">
+          <img src="assets/finder.png" alt="ThrowLab screen used to center a disc in a mid-flight video frame" width="946" height="2048" loading="lazy" decoding="async">
+        </figure>
+        <ol class="steps">
+          <li><span>01</span><div><h3>Choose your disc and throw style</h3><p>Search for the disc you threw, then select RHBH, RHFH, LHBH, or LHFH.</p></div></li>
+          <li><span>02</span><div><h3>Upload a slow-motion side view</h3><p>Use landscape video trimmed from shortly before release until just after the disc leaves the frame.</p></div></li>
+          <li><span>03</span><div><h3>Find the disc in mid-flight</h3><p>Scrub until the disc is out of your hand, then zoom and center it completely inside the circle.</p></div></li>
+          <li><span>04</span><div><h3>Review the throw</h3><p>See your release breakdown, predicted early flight, and one clear thing to try next.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section shell intro" id="what-it-reads">
+      <div class="section-heading compact">
+        <p class="kicker">What ThrowLab analyzes</p>
+        <h2>Three readings that explain your release.</h2>
+        <p class="section-intro">ThrowLab analyzes a slow-motion clip to show whether your speed fits the disc, how the disc is angled at release, and whether it is traveling upward, flat, or downward. Then it explains how those pieces are likely to shape the flight.</p>
+      </div>
+      <div class="metric-grid">
+        <article class="metric-card">
+          <span class="metric-index">01</span>
+          <div class="metric-light yellow"></div>
           <h3>Power match</h3>
-          <p>Is your release speed right for this mold, or are you under-powering a high-speed driver?</p>
-        </div>
-        <div class="card">
-          <div class="card-num">02</div>
+          <p>See whether your release speed is slightly low, matched, or slightly high for the disc you selected. A driver and a midrange should not be judged the same way.</p>
+        </article>
+        <article class="metric-card">
+          <span class="metric-index">02</span>
+          <div class="metric-light red"></div>
           <h3>Disc angle</h3>
-          <p>Hyzer, flat, or anhyzer measured at the moment the disc leaves your hand.</p>
-        </div>
-        <div class="card">
-          <div class="card-num">03</div>
+          <p>See whether the disc leaves your hand on anhyzer, slightly anhyzer, flat, slightly hyzer, or hyzer. ThrowLab interprets the angle for your throwing side and throw style.</p>
+        </article>
+        <article class="metric-card">
+          <span class="metric-index">03</span>
+          <div class="metric-light cyan"></div>
           <h3>Release path</h3>
-          <p>Flat, upward, or downward launch — the difference between a line and a lawn dart.</p>
-        </div>
-        <div class="card">
-          <div class="card-num">04</div>
-          <h3>Predicted flight</h3>
-          <p>Qualitative shape for your throw style: RHBH, RHFH, LHBH, or LHFH.</p>
-        </div>
+          <p>See whether the disc is traveling upward, slightly upward, flat, slightly downward, or downward immediately after release.</p>
+        </article>
       </div>
     </section>
 
-    <section>
-      <div class="section-label">Tuned to your disc</div>
-      <h2>A high-speed driver and a mid-range get different coaching for the same release.</h2>
-      <p class="lead">Analysis is matched to the ratings of the disc you select — speed, glide, turn, and fade. Build your bag in the app and analyze with the mold you actually threw.</p>
-      <div class="pills">
-        <div class="pill"><strong>SPEED</strong><span>Factored into every read</span></div>
-        <div class="pill"><strong>GLIDE</strong><span>Factored into every read</span></div>
-        <div class="pill"><strong>TURN</strong><span>Factored into every read</span></div>
-        <div class="pill"><strong>FADE</strong><span>Factored into every read</span></div>
+    <section class="section feature-section">
+      <div class="shell feature-layout">
+        <div class="feature-copy">
+          <p class="kicker">Scored to the disc you threw</p>
+          <h2>Same angle. Different disc. Different flight.</h2>
+          <p>The same release can produce a very different flight with an overstable driver than with an understable midrange. ThrowLab uses the selected disc’s speed, glide, turn, and fade so the feedback fits the mold in your hand.</p>
+          <div class="flight-numbers" aria-label="Disc flight ratings">
+            <span><b>9</b><small>Speed</small></span>
+            <span><b>3</b><small>Glide</small></span>
+            <span><b>0</b><small>Turn</small></span>
+            <span><b>4</b><small>Fade</small></span>
+          </div>
+          <p class="feature-note">When power is slightly low or high, Disc Fit suggests a speed or stability profile that may suit the throw better. When power matches, the coaching stays focused on the release.</p>
+        </div>
+        <figure class="phone phone-secondary">
+          <img src="assets/bag.png" alt="ThrowLab bag with Firebird and Buzzz flight ratings" width="946" height="2048" loading="lazy" decoding="async">
+        </figure>
       </div>
     </section>
 
-    <section>
-      <div class="split">
+    <section class="section accuracy-section" id="accuracy">
+      <div class="shell accuracy-layout">
         <div>
-          <div class="section-label">How to capture</div>
-          <h2>Three rules for a clean read</h2>
-          <table class="rules-table">
-            <tr>
-              <td>Orientation</td>
-              <td>Landscape, side view</td>
-            </tr>
-            <tr>
-              <td>Framing</td>
-              <td>Trimmed to the throw</td>
-            </tr>
-            <tr>
-              <td>Frame rate</td>
-              <td>Slow-motion preferred</td>
-            </tr>
-          </table>
+          <p class="kicker">Get the clearest analysis</p>
+          <h2>Give ThrowLab a clean view of the disc.</h2>
+          <p class="section-intro">A clear side view helps ThrowLab follow the disc from release through its early flight.</p>
         </div>
-        <div class="privacy-card">
-          <h3>Privacy</h3>
-          <p style="font-size:1.15rem;color:var(--text);font-weight:700;margin-bottom:10px;">Everything runs on your iPhone.</p>
-          <p>Video is analyzed on device with Apple’s Vision framework. Your footage is never uploaded, and ThrowLab has no accounts, no servers, and no tracking.</p>
-          <a href="privacy.html">Read the privacy policy →</a>
+        <div class="check-grid">
+          <div><span>✓</span><strong>Slow motion</strong><small>240 fps is recommended. 120 fps is supported.</small></div>
+          <div><span>✓</span><strong>Landscape video</strong><small>Give the disc room to travel across frame.</small></div>
+          <div><span>✓</span><strong>Side view</strong><small>Film roughly perpendicular to the intended line.</small></div>
+          <div><span>✓</span><strong>Trimmed to the throw</strong><small>Start shortly before release and end after the disc exits.</small></div>
         </div>
       </div>
+      <p class="accuracy-note shell"><strong>About accuracy:</strong> Results are training estimates, not launch-monitor measurements. Heavy blur, poor lighting, an obstructed disc, or the wrong camera angle can make the disc harder to track. When that happens, ThrowLab may ask for a clearer clip.</p>
     </section>
-  </div>
 
-  <footer class="footer">
-    <span>© 2026 ThrowLab. Analysis runs on your iPhone.</span>
-    <a href="mailto:throwlabapp@gmail.com">throwlabapp@gmail.com</a>
+    <section class="section shell compare-section">
+      <div class="compare-layout">
+        <div class="compare-copy">
+          <p class="kicker">Throw history</p>
+          <h2>Track what changed from one throw to the next.</h2>
+          <p>Every analysis is saved on your iPhone. Compare releases over time and see whether the change you made actually carried into the next throw.</p>
+          <div class="history-examples" aria-label="Example throw history comparisons">
+            <div><span><b>Firebird</b><small>Throw 01</small></span><strong>Slightly low · Hyzer · Slightly upward</strong></div>
+            <div><span><b>Buzzz</b><small>Throw 02</small></span><strong>Matched · Slightly anhyzer · Flat</strong></div>
+          </div>
+        </div>
+        <figure class="phone phone-history">
+          <img src="assets/history.png" alt="ThrowLab history of recent disc golf throws with power match and flight notes" width="946" height="2048" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section shell faq-section">
+      <div class="section-heading compact">
+        <p class="kicker">Common questions</p>
+        <h2>Questions players ask before analyzing a throw.</h2>
+      </div>
+      <div class="faq">
+        <details><summary>What does a disc golf analysis app measure?</summary><p>ThrowLab estimates power match, disc angle, and release path from slow-motion video. It combines those readings with the selected disc’s flight ratings and throw style to describe the likely flight and suggest what to change next.</p></details>
+        <details><summary>What do hyzer, flat, and anhyzer mean in disc golf?</summary><p>On a hyzer release, the disc’s outer edge—the edge farthest from your body—is lower than the inner edge. On an anhyzer release, the outer edge is higher. A flat release sits between them. ThrowLab interprets the angle using your throwing side and whether you throw backhand or forehand.</p></details>
+        <details><summary>Does ThrowLab work for forehand and left-handed throws?</summary><p>Yes. ThrowLab supports right-hand backhand, right-hand forehand, left-hand backhand, and left-hand forehand. Your selected throw style helps the app interpret hyzer and anhyzer correctly and describe the expected flight direction.</p></details>
+        <details><summary>Can I use ThrowLab when throwing into a net?</summary><p>Yes. ThrowLab reads the release and early flight, so the disc does not need to land on camera. Keep the disc visible for several frames after it leaves your hand.</p></details>
+        <details><summary>Do I need a radar gun, sensor disc, or stickers?</summary><p>No. ThrowLab uses slow-motion video from your iPhone. You select the disc from your bag and center it in one mid-flight frame before analysis.</p></details>
+        <details><summary>Why does the selected disc matter?</summary><p>Different molds are designed for different speeds and flight shapes. ThrowLab uses speed and category for power matching, while turn and fade help explain the predicted flight and disc-fit guidance.</p></details>
+        <details><summary>Is ThrowLab analyzing my body mechanics?</summary><p>No. ThrowLab is focused on the disc at and immediately after release. It does not score reach-back, footwork, brace, or hip rotation.</p></details>
+        <details><summary>Are videos uploaded to a server?</summary><p>No. Throw videos are analyzed on your iPhone and are not uploaded for analysis. ThrowLab does not require an account.</p></details>
+        <details><summary>How much does ThrowLab Pro cost?</summary><p>ThrowLab Pro is $4.99 per month or $39.99 per year after a 3-day free trial. Apple charges your Apple Account when the trial ends unless you cancel at least 24 hours before renewal.</p></details>
+      </div>
+    </section>
+
+    <section class="section shell privacy-callout" id="on-device">
+      <div class="privacy-panel">
+        <p class="kicker">On-device analysis</p>
+        <h2>Your throw analysis stays on your iPhone.</h2>
+        <p>Your throw video is analyzed on your iPhone and is never uploaded for analysis. No ThrowLab account is required.</p>
+      </div>
+    </section>
+
+    <section class="download-section" id="download">
+      <div class="shell download-card">
+        <img src="assets/app-icon.png" alt="ThrowLab app icon" width="112" height="112" loading="lazy">
+        <div>
+          <p class="kicker">ThrowLab Pro for iPhone</p>
+          <h2>Stop guessing what happened at release.</h2>
+          <p>Try every analysis feature free for 3 days. Continue for $4.99/month or $39.99/year. Your throw videos stay on your iPhone.</p>
+          <p class="download-note">Cancel at least 24 hours before the trial ends in Settings under your Apple Account and Subscriptions.</p>
+        </div>
+        <a class="button primary" href="https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743">Get ThrowLab on the App Store</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <div class="footer-brand"><img src="assets/throwlab-mark-clean.png" alt="" width="32" height="20"><span><strong>ThrowLab</strong><small>Disc golf analysis app for iPhone</small></span></div>
+    <div class="footer-links"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+    <p>Measurements are estimates. Throw safely.</p>
   </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }));
+    }
+  </script>
 </body>
 </html>

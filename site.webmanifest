@@ -1,0 +1,10 @@
+{
+  "name": "ThrowLab",
+  "short_name": "ThrowLab",
+  "description": "Disc golf release analysis for iPhone",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#050b18",
+  "theme_color": "#050b18",
+  "icons": [{"src": "assets/app-icon.png", "sizes": "1024x1024", "type": "image/png"}]
+}
