@@ -305,3 +305,50 @@ h1, h2, h3, p { margin-top: 0; }
   html { scroll-behavior: auto; }
   a, .button, .metric-card, .support-card, .faq summary, .nav-toggle span { transition: none; }
 }
+
+/* Marketing-site treatment: give the page its own rhythm instead of making it
+   resemble a stack of screens from the app. */
+.hero {
+  min-height: 680px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, .72fr);
+  gap: 88px;
+  padding-block: 92px 104px;
+}
+.hero-headline { font-size: clamp(2.8rem, 5.2vw, 4.8rem); max-width: 680px; }
+.hero-lead { font-size: 1.18rem; max-width: 570px; }
+.hero-visual { min-height: 560px; padding: 0; }
+.hero-visual::before, .orbit, .result-chip { display: none; }
+.phone { border-radius: 28px; box-shadow: 0 22px 70px rgba(0,0,0,.34); }
+.phone-main { width: min(300px, 100%); }
+.proof-strip { background: transparent; }
+.proof-grid { min-height: 64px; color: var(--blue-light); }
+.section { padding-block: 112px; }
+.section-heading { margin-bottom: 48px; }
+.metric-grid { gap: 28px; }
+.metric-card { min-height: 248px; padding: 30px; border-radius: 16px; background: rgba(9,20,38,.38); }
+.metric-card:hover { transform: none; box-shadow: none; }
+.metric-light { margin-top: 42px; }
+.feature-section { background: #07101f; }
+.feature-layout { gap: 110px; }
+.feature-note { background: transparent; }
+.steps-layout { gap: 110px; }
+.steps li { padding-block: 32px; }
+.accuracy-section { background: transparent; }
+.check-grid > div { background: transparent; border-radius: 12px; }
+.compare-section { padding-block: 100px; }
+.faq-section { padding-top: 92px; }
+.download-section { padding-top: 58px; }
+.download-card { border-radius: 18px; box-shadow: none; }
+
+@media (max-width: 900px) {
+  .hero { gap: 36px; padding-block: 70px 76px; }
+  .hero-visual { min-height: 540px; }
+}
+
+@media (max-width: 680px) {
+  .hero { padding-block: 52px 60px; }
+  .hero-headline { font-size: clamp(2.35rem, 11vw, 3.2rem); }
+  .hero-lead { font-size: 1.04rem; }
+  .section { padding-block: 72px; }
+  .phone-main { width: min(270px, 72vw); }
+}
