@@ -96,7 +96,8 @@ h1, h2, h3, p { margin-top: 0; }
 .dot.yellow { background: var(--yellow); box-shadow: 0 0 13px var(--yellow); }
 .dot.red { background: var(--red); box-shadow: 0 0 13px var(--red); }
 .dot.cyan { background: var(--cyan); box-shadow: 0 0 13px var(--cyan); }
-/* Float chips off the screenshot so they never cover POWER MATCH / DISC ANGLE cards */
+.metric-light.green { background: var(--green); box-shadow: 0 0 16px var(--green); }
+/* Legacy chip positioning retained for older subpage components. */
 .chip-one { left: auto; right: calc(50% + 150px); top: 72px; }
 .chip-two { right: auto; left: calc(50% + 150px); bottom: 88px; top: auto; }
 .chip-three { left: auto; right: calc(50% + 138px); bottom: 168px; }
@@ -174,6 +175,76 @@ h1, h2, h3, p { margin-top: 0; }
 .stack-back { right: 0; top: 0; z-index: 1; }
 .stack-front { left: 0; bottom: 0; z-index: 2; }
 
+/* Current product story */
+.hero-visual.clean { min-height: 700px; padding-inline: 24px; }
+.hero-visual.clean::before {
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(circle, rgba(24, 113, 255, .16), transparent 68%);
+}
+.hero-visual.clean .phone-main { width: min(350px, 72vw); }
+
+.progress-section {
+  border-bottom: 1px solid rgba(45, 86, 134, .42);
+  background: linear-gradient(180deg, #081426, #06101f);
+}
+.progress-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .9fr);
+  align-items: center;
+  gap: 80px;
+}
+.progress-copy > p:not(.kicker) { color: var(--soft); font-size: 1.05rem; }
+.plain-points { list-style: none; display: grid; gap: 0; margin: 28px 0; padding: 0; border-top: 1px solid var(--line); }
+.plain-points li { display: grid; grid-template-columns: 112px 1fr; gap: 20px; padding: 17px 0; border-bottom: 1px solid var(--line); }
+.plain-points strong { color: var(--text); }
+.plain-points span { color: var(--muted); }
+.progress-proof { max-width: 520px; justify-self: end; }
+.progress-window {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  border: 1px solid var(--line-bright);
+  border-radius: 24px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+.progress-window img { position: absolute; inset: 0 auto auto 0; width: 100%; max-width: none; transform: translateY(-43%); }
+.progress-proof > p { margin: 16px 4px 0; color: var(--muted); font-size: .84rem; line-height: 1.5; }
+
+.how-section { border-block: 1px solid rgba(45, 86, 134, .42); background: #07101f; }
+.horizontal-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.horizontal-steps li {
+  display: block;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(5, 14, 28, .68);
+}
+.horizontal-steps li:first-child { border-top: 1px solid var(--line); }
+.horizontal-steps li > span { margin-bottom: 26px; }
+.horizontal-steps h3 { font-size: 1.08rem; }
+.horizontal-steps p { font-size: .92rem; }
+
+.discs-section { overflow: hidden; background: radial-gradient(circle at 50% 55%, rgba(33, 112, 226, .13), transparent 34rem); }
+.dual-phones {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) minmax(280px, 1fr) minmax(220px, 300px);
+  align-items: center;
+  gap: 48px;
+}
+.dual-phones .phone-secondary { width: 100%; }
+.disc-copy { text-align: center; }
+.disc-copy h3 { margin: 30px 0 10px; font-size: 1.45rem; }
+.disc-copy p { margin: 0; color: var(--muted); }
+.disc-copy .flight-numbers { justify-content: center; }
+
+.history-section { padding-block: 84px; }
+.history-layout { display: grid; grid-template-columns: 1fr minmax(260px, 340px); align-items: center; gap: 90px; }
+.history-copy { max-width: 560px; }
+.history-copy p:not(.kicker) { color: var(--soft); font-size: 1.08rem; }
+.history-layout .phone-history { width: 100%; }
+
 .faq-section { padding-top: 56px; }
 .faq { max-width: 880px; }
 .faq details { border-top: 1px solid var(--line); }
@@ -242,6 +313,11 @@ h1, h2, h3, p { margin-top: 0; }
   .phone-stack { width: min(460px, 100%); }
   .download-card { grid-template-columns: auto 1fr; }
   .download-card .button { grid-column: 1 / -1; }
+  .progress-layout, .history-layout { grid-template-columns: 1fr; gap: 48px; }
+  .progress-proof { justify-self: center; width: min(520px, 100%); }
+  .horizontal-steps { grid-template-columns: 1fr 1fr; }
+  .dual-phones { grid-template-columns: minmax(220px, 300px) minmax(220px, 300px); justify-content: center; }
+  .disc-copy { grid-column: 1 / -1; grid-row: 1; max-width: 620px; justify-self: center; }
 }
 
 @media (max-width: 680px) {
@@ -296,6 +372,20 @@ h1, h2, h3, p { margin-top: 0; }
   .footer > p { grid-column: auto; margin: 0; }
   .contact-card, .support-grid { grid-template-columns: 1fr; }
   .page-wrap { padding-top: 50px; }
+  .hero-visual.clean { min-height: 535px; }
+  .hero-visual.clean .phone-main { width: min(270px, 72vw); }
+  .progress-layout { gap: 36px; }
+  .progress-window { height: 360px; border-radius: 18px; }
+  .plain-points li { grid-template-columns: 1fr; gap: 4px; }
+  .horizontal-steps { grid-template-columns: 1fr; gap: 12px; }
+  .horizontal-steps li { padding: 21px; }
+  .horizontal-steps li > span { margin-bottom: 18px; }
+  .dual-phones { grid-template-columns: 1fr; gap: 30px; justify-items: center; }
+  .disc-copy { grid-column: auto; grid-row: auto; order: 1; }
+  .dual-phones figure:first-of-type { order: 2; }
+  .dual-phones figure:last-of-type { order: 3; }
+  .dual-phones .phone-secondary { width: min(270px, 78vw); }
+  .history-layout { gap: 36px; }
 }
 
 @media (max-width: 420px) {
@@ -304,51 +394,4 @@ h1, h2, h3, p { margin-top: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   a, .button, .metric-card, .support-card, .faq summary, .nav-toggle span { transition: none; }
-}
-
-/* Marketing-site treatment: give the page its own rhythm instead of making it
-   resemble a stack of screens from the app. */
-.hero {
-  min-height: 680px;
-  grid-template-columns: minmax(0, 1.05fr) minmax(280px, .72fr);
-  gap: 88px;
-  padding-block: 92px 104px;
-}
-.hero-headline { font-size: clamp(2.8rem, 5.2vw, 4.8rem); max-width: 680px; }
-.hero-lead { font-size: 1.18rem; max-width: 570px; }
-.hero-visual { min-height: 560px; padding: 0; }
-.hero-visual::before, .orbit, .result-chip { display: none; }
-.phone { border-radius: 28px; box-shadow: 0 22px 70px rgba(0,0,0,.34); }
-.phone-main { width: min(300px, 100%); }
-.proof-strip { background: transparent; }
-.proof-grid { min-height: 64px; color: var(--blue-light); }
-.section { padding-block: 112px; }
-.section-heading { margin-bottom: 48px; }
-.metric-grid { gap: 28px; }
-.metric-card { min-height: 248px; padding: 30px; border-radius: 16px; background: rgba(9,20,38,.38); }
-.metric-card:hover { transform: none; box-shadow: none; }
-.metric-light { margin-top: 42px; }
-.feature-section { background: #07101f; }
-.feature-layout { gap: 110px; }
-.feature-note { background: transparent; }
-.steps-layout { gap: 110px; }
-.steps li { padding-block: 32px; }
-.accuracy-section { background: transparent; }
-.check-grid > div { background: transparent; border-radius: 12px; }
-.compare-section { padding-block: 100px; }
-.faq-section { padding-top: 92px; }
-.download-section { padding-top: 58px; }
-.download-card { border-radius: 18px; box-shadow: none; }
-
-@media (max-width: 900px) {
-  .hero { gap: 36px; padding-block: 70px 76px; }
-  .hero-visual { min-height: 540px; }
-}
-
-@media (max-width: 680px) {
-  .hero { padding-block: 52px 60px; }
-  .hero-headline { font-size: clamp(2.35rem, 11vw, 3.2rem); }
-  .hero-lead { font-size: 1.04rem; }
-  .section { padding-block: 72px; }
-  .phone-main { width: min(270px, 72vw); }
 }
