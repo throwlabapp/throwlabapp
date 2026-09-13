@@ -213,6 +213,7 @@ h1, h2, h3, p { margin-top: 0; }
 .progress-proof > p { margin: 16px 4px 0; color: var(--muted); font-size: .84rem; line-height: 1.5; }
 
 .how-section { border-block: 1px solid rgba(45, 86, 134, .42); background: #07101f; }
+.current-steps { margin-top: 0; }
 .horizontal-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .horizontal-steps li {
   display: block;
