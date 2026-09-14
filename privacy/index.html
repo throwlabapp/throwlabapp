@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ThrowLab Privacy Policy: On-Device Analysis</title>
-  <meta name="description" content="Learn how ThrowLab analyzes disc golf videos on your iPhone without accounts, advertising trackers, or uploading your throw videos.">
+  <meta name="description" content="Learn how ThrowLab handles app data, on-device throw analysis, website analytics, cookies, and consent choices.">
   <meta name="theme-color" content="#050b18">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://throwlabapp.com/privacy/">
@@ -11,12 +11,36 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    const throwLabConsent=localStorage.getItem('throwlab_analytics_consent');
+    gtag('consent','default',{
+      'analytics_storage':throwLabConsent==='accepted'?'granted':'denied',
+      'ad_storage':'denied',
+      'ad_user_data':'denied',
+      'ad_personalization':'denied',
+      'wait_for_update':500
+    });
+    gtag('set','ads_data_redaction',true);
+    dataLayer.push({'ga4_measurement_id':'G-XWJJD34SKG'});
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WXPRTSX5');</script>
+  <!-- End Google Tag Manager -->
 </head>
 <body class="subpage">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXPRTSX5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><nav class="nav shell" aria-label="Main navigation"><a class="brand" href="../"><img src="../assets/throwlab-mark-clean.png" alt="" width="35" height="22"><span>ThrowLab</span></a><div class="nav-links" id="nav-links"><a href="../">Home</a><a href="../support/">Support</a><a href="../privacy/" aria-current="page">Privacy</a></div><div class="nav-right"><a class="nav-cta" href="https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743">Get ThrowLab</a><button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button></div></nav></header>
   <main id="main" class="page-wrap prose">
-    <header class="page-hero"><p class="kicker">Legal</p><h1>Privacy Policy</h1><p class="meta">Last updated August 28, 2026</p></header>
+    <header class="page-hero"><p class="kicker">Legal</p><h1>Privacy Policy</h1><p class="meta">Last updated September 14, 2026</p></header>
     <p>ThrowLab is a disc golf analysis app for iPhone. This policy explains what the app accesses, why it needs that access, and where your information goes. The short version: <strong>throw analysis runs on your iPhone.</strong> Your videos are not uploaded for analysis, and no ThrowLab account is required.</p>
     <h2>Information we collect</h2><p><strong>We do not collect, transmit, or store personal information on ThrowLab servers.</strong> ThrowLab has no user accounts, advertising SDKs, or third-party tracking SDKs.</p>
     <h2>Camera and video</h2><p>ThrowLab may request camera access so you can record a throw. Recorded video is stored locally and analyzed on the device with Apple’s Vision framework. ThrowLab does not upload or transmit your video.</p>
@@ -25,7 +49,8 @@
     <h2>Data stored on your device</h2><ul><li>Throw recordings and analysis results</li><li>Discs saved in your bag and their ratings</li><li>Local diagnostic information associated with your analyses</li><li>App settings and preferences</li></ul><p>Deleting the app removes its locally stored data. ThrowLab cannot recover information that was never sent to a server.</p>
     <h2>Disc catalog lookup</h2><p>When you search for a disc to add to your bag, ThrowLab may request matching public disc information from a catalog service. This lookup uses the disc name you type. Your throw videos and analysis results are not included.</p>
     <h2>Subscriptions and payments</h2><p>Apple processes ThrowLab Pro subscriptions through the App Store. ThrowLab does not receive your card number or billing address. Apple’s handling of purchases is governed by <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</p>
-    <h2>Tracking</h2><p>ThrowLab does not track you across apps or websites, sell personal information, or share information with data brokers or advertisers.</p>
+    <h2>Website analytics and cookies</h2><p>The ThrowLab website uses Google Tag Manager and, with your permission, Google Analytics 4 to understand page visits, navigation, and interactions such as App Store link clicks. Analytics storage is denied until you select Accept analytics in the consent banner. If you decline, analytics storage remains disabled. Your choice is saved in your browser so the website can remember it. You can reopen Cookie settings from the website footer at any time.</p><p>Google may process analytics information according to <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>. ThrowLab does not use website analytics to access your throw videos or in-app analysis results.</p>
+    <h2>Tracking</h2><p>The ThrowLab iPhone app does not track you across apps or websites, sell personal information, or share information with data brokers or advertisers. Website analytics is optional and controlled by the consent choice described above.</p>
     <h2>Children</h2><p>ThrowLab does not knowingly collect personal information from children. Because the app has no account system, children should use it only with appropriate supervision during physical activity.</p>
     <h2>Your choices</h2><p>You control the videos you select and the information stored in the app. You can delete saved items in ThrowLab or delete the app to remove its local data. There is no ThrowLab account or server-side profile to delete.</p>
     <h2>Changes to this policy</h2><p>If this policy changes, this page will be updated with a new revision date.</p>
@@ -46,5 +71,10 @@
       }));
     }
   </script>
+  <aside class="consent-banner" id="consent-banner" role="dialog" aria-modal="false" aria-labelledby="consent-title" hidden>
+    <div><strong id="consent-title">Help improve ThrowLab</strong><p>We use Google Analytics to understand how people use this website. Analytics is optional. <a href="../privacy/">Learn more</a></p></div>
+    <div class="consent-actions"><button class="consent-button secondary" id="consent-decline" type="button">Decline</button><button class="consent-button primary" id="consent-accept" type="button">Accept analytics</button></div>
+  </aside>
+  <script src="../consent.js"></script>
 </body>
 </html>
