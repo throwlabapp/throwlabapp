@@ -92,13 +92,14 @@
         </div>
         <ul class="trust-list"><li>Free 3-day trial</li><li>Works in a field or into a net</li><li>Video stays on your iPhone</li><li>No extra hardware</li></ul>
       </div>
-      <div class="hero-visual"><figure class="phone hero-phone"><picture><source srcset="assets/analysis.webp" type="image/webp"><img src="assets/analysis.png" alt="ThrowLab analysis showing speed, disc angle, release path, progress, and next throw guidance" width="946" height="2048" fetchpriority="high"></picture></figure></div>
+      <div class="hero-visual">
+        <figure class="phone hero-phone"><picture><source srcset="assets/analysis.webp" type="image/webp"><img src="assets/analysis.png" alt="ThrowLab analysis showing speed, disc angle, release path, progress, and next throw guidance" width="946" height="2048" fetchpriority="high"></picture></figure>
+      </div>
     </section>
 
-    <section class="value-strip" aria-label="ThrowLab workflow"><div class="shell value-grid"><span><b>01</b> Analyze the release</span><span><b>02</b> See your results</span><span><b>03</b> Review the session</span><span><b>04</b> Adjust the next throw</span></div></section>
-
     <section class="section section-dark" id="analysis">
-      <div class="shell feature-grid">
+      <div class="shell feature-grid reverse">
+        <figure class="phone screen-left"><picture><source srcset="assets/home.webp" type="image/webp"><img src="assets/home.png" alt="ThrowLab capture screen with disc, throw style, and intended line selections" width="946" height="2048" loading="lazy"></picture></figure>
         <div class="feature-copy">
           <p class="eyebrow">Release analysis</p>
           <h2>Understand your release.</h2>
@@ -110,7 +111,6 @@
           </div>
           <p class="note">Results are relative ratings, not exact miles per hour or degree measurements.</p>
         </div>
-        <figure class="phone screen-right"><picture><source srcset="assets/home.webp" type="image/webp"><img src="assets/home.png" alt="ThrowLab capture screen with disc, throw style, and intended line selections" width="946" height="2048" loading="lazy"></picture></figure>
       </div>
     </section>
 
@@ -123,8 +123,12 @@
       <div class="shell progress-session-grid">
         <div class="feature-copy">
           <div class="stat-row"><div><strong>8 of 10</strong><span>Speed target hits</span></div><div><strong>7 of 10</strong><span>Angle target hits</span></div><div><strong>10 of 10</strong><span>Path target hits</span></div></div>
-          <p>A Buzzz backhand on a straight line should not be mixed with a Wraith forehand on anhyzer. Progress is grouped by disc, throwing style, and intended line so you can compare the same kind of throw.</p>
-          <p class="note">Progress begins with sets of five qualifying throws and expands to sets of 10 as your history grows.</p>
+          <p>Only throws with the same disc, throwing style, and intended line count toward each other, so your targets reflect one throw, not an average across your whole bag.</p>
+          <ul class="clean-list">
+            <li>Sessions form automatically from your practice window</li>
+            <li>Targets start at 5 qualifying throws, then expand to 10</li>
+            <li>Speed, angle, and path are tracked as separate hit rates</li>
+          </ul>
         </div>
         <div class="session-demo" aria-label="Interactive practice session example">
           <div class="session-demo-head">
@@ -171,21 +175,32 @@
     </section>
 
     <section class="section section-dark" id="discs">
-      <div class="shell section-heading"><p class="eyebrow">Your discs</p><h2>Manage your bag.</h2><p>Save the discs you throw, then compare them with more than 2,400 discs when you want a different speed, glide, turn, or fade.</p></div>
-      <div class="shell phones-pair"><figure class="phone"><picture><source srcset="assets/bag.webp" type="image/webp"><img src="assets/bag.png" alt="ThrowLab My Bag screen with five saved discs and flight numbers" width="946" height="2048" loading="lazy"></picture></figure><figure class="phone"><picture><source srcset="assets/disc-compare-new.webp" type="image/webp"><img src="assets/disc-compare-new.png" alt="ThrowLab disc comparison screen showing Buzzz alternatives based on flight numbers" width="946" height="2048" loading="lazy"></picture></figure></div>
+      <div class="shell feature-grid reverse">
+        <figure class="phone screen-left"><picture><source srcset="assets/bag.webp" type="image/webp"><img src="assets/bag.png" alt="ThrowLab My Bag screen with five saved discs and flight numbers" width="946" height="2048" loading="lazy"></picture></figure>
+        <div class="feature-copy">
+          <p class="eyebrow">Your discs</p>
+          <h2>Manage your bag.</h2>
+          <p>Add each disc you throw and ThrowLab remembers its flight numbers, so every analysis is measured against the right disc instead of a generic average.</p>
+          <div class="measure-list">
+            <div><span>My Bag</span><p>Every disc you throw, with speed, glide, turn, and fade at a glance.</p></div>
+            <div><span>Compare</span><p>Search more than 2,400 discs to find a match by flight numbers.</p></div>
+            <div><span>Swap in</span><p>Replace a worn or lost disc without losing its throw history.</p></div>
+          </div>
+        </div>
+      </div>
     </section>
 
 
     <section class="section section-band" id="how-it-works">
       <div class="shell section-heading"><p class="eyebrow">How it works</p><h2>How ThrowLab works.</h2><p>Set up the throw, record in slow motion, then find the disc and let ThrowLab do the rest.</p></div>
-      <div class="shell workflow">
-        <figure class="phone finder-phone"><picture><source srcset="assets/find-disc.webp" type="image/webp"><img src="assets/find-disc.png" alt="ThrowLab Find the Disc screen with a disc centered in early flight" width="946" height="2048" loading="lazy"></picture></figure>
+      <div class="shell workflow reverse">
         <ol class="steps">
           <li><b>01</b><div><h3>Set the throw</h3><p>Choose your disc, throwing style, and intended line.</p></div></li>
           <li><b>02</b><div><h3>Record in slow motion</h3><p>Use a trimmed landscape clip with the full throw visible from the side.</p></div></li>
           <li><b>03</b><div><h3>Find the disc</h3><p>Move to a clear early-flight frame, center the disc, and tap Analyze.</p></div></li>
           <li><b>04</b><div><h3>Review and repeat</h3><p>Review the release and progress, then add another throw to the session.</p></div></li>
         </ol>
+        <figure class="phone finder-phone"><picture><source srcset="assets/find-disc.webp" type="image/webp"><img src="assets/find-disc.png" alt="ThrowLab Find the Disc screen with a disc centered in early flight" width="946" height="2048" loading="lazy"></picture></figure>
       </div>
     </section>
 
