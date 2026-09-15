@@ -11,7 +11,6 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="icon" href="assets/app-icon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/app-icon.png">
-  <link rel="preload" as="image" href="assets/analysis.webp" type="image/webp" fetchpriority="high">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ThrowLab">
   <meta property="og:title" content="ThrowLab | Build a More Consistent Disc Golf Throw">
@@ -28,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"ThrowLab","applicationCategory":"SportsApplication","operatingSystem":"iOS","url":"https://throwlabapp.com/","downloadUrl":"https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743","description":"ThrowLab is a disc golf throw analyzer for iPhone that evaluates speed, disc angle, and release path from slow-motion video and tracks consistency by disc, throwing style, and intended line.","offers":[{"@type":"Offer","name":"ThrowLab Pro monthly","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"ThrowLab Pro yearly","price":"39.99","priceCurrency":"USD"}],"image":"https://throwlabapp.com/assets/app-icon.png","screenshot":["https://throwlabapp.com/assets/analysis.png","https://throwlabapp.com/assets/home.png","https://throwlabapp.com/assets/bag.png"],"featureList":["Disc golf release analysis","Speed, disc angle, and release path ratings","Progress tracking by disc, style, and intended line","Automatic practice sessions","Next Throw guidance","Disc bag and flight-number comparison","On-device video processing"]}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"ThrowLab","applicationCategory":"SportsApplication","operatingSystem":"iOS","url":"https://throwlabapp.com/","downloadUrl":"https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743","description":"ThrowLab is a disc golf throw analyzer for iPhone that evaluates speed, disc angle, and release path from slow-motion video and tracks consistency by disc, throwing style, and intended line.","offers":[{"@type":"Offer","name":"ThrowLab Pro monthly","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"ThrowLab Pro yearly","price":"39.99","priceCurrency":"USD"}],"image":"https://throwlabapp.com/assets/app-icon.png","screenshot":["https://throwlabapp.com/assets/analysis.webp","https://throwlabapp.com/assets/home.webp","https://throwlabapp.com/assets/bag.webp"],"featureList":["Disc golf release analysis","Speed, disc angle, and release path ratings","Progress tracking by disc, style, and intended line","Automatic practice sessions","Next Throw guidance","Disc bag and flight-number comparison","On-device video processing"]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -70,7 +69,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <nav class="nav shell" aria-label="Main navigation">
-      <a class="brand" href="/" aria-label="ThrowLab home"><img src="assets/throwlab-mark-clean.png" alt="" width="35" height="22"><span>ThrowLab</span></a>
+      <a class="brand" href="/" aria-label="ThrowLab home"><img src="assets/throwlab-mark-clean.webp" alt="" width="35" height="22"><span>ThrowLab</span></a>
       <div class="nav-links" id="nav-links"><a href="#analysis">Analysis</a><a href="#sessions">Sessions</a><a href="#discs">Discs</a><a href="#how-it-works">How it works</a><a href="support/">Support</a></div>
       <div class="nav-right"><a class="nav-cta" href="https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743">Get ThrowLab</a><button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button></div>
     </nav>
@@ -80,7 +79,7 @@
     <section class="hero shell">
       <div class="hero-copy">
         <h1 class="eyebrow">Disc golf analyzer app for iPhone</h1>
-        <p class="hero-title">Analyze your release.<br><span>Dial in your throw.</span></p>
+        <p class="hero-title">Analyze your release.<br><span>Throw farther.</span></p>
         <p class="hero-lead">ThrowLab uses slow-motion video to evaluate your speed, disc angle, and release path, then shows you what to adjust and tracks your progress over time.</p>
         <div class="hero-actions">
           <div class="store-cta">
@@ -93,13 +92,41 @@
         <ul class="trust-list"><li>Free 3-day trial</li><li>Works in a field or into a net</li><li>Video stays on your iPhone</li><li>No extra hardware</li></ul>
       </div>
       <div class="hero-visual">
-        <figure class="phone hero-phone"><picture><source srcset="assets/analysis.webp" type="image/webp"><img src="assets/analysis.png" alt="ThrowLab analysis showing speed, disc angle, release path, progress, and next throw guidance" width="946" height="2048" fetchpriority="high"></picture></figure>
+        <div class="app-preview analysis-preview" aria-label="ThrowLab analysis showing speed, disc angle, release path, progress, and next throw guidance">
+          <section class="app-card result-card">
+            <header class="app-card-heading"><div><h2>Analysis</h2><p>Buzzz · RHBH · Straight · 19 tracked frames</p></div></header>
+            <div class="metrics-panel">
+              <div class="target-legend"><i></i><span>Target range</span></div>
+              <div class="metric-row"><div class="metric-top"><b>Speed</b><span class="metric-badge warning">Slightly low</span></div><div class="metric-scale"><i class="target"></i><i class="marker speed-marker"></i></div><div class="metric-labels"><span>Low</span><span>Matched</span><span>High</span></div></div>
+              <div class="metric-row"><div class="metric-top"><b>Disc angle</b><span class="metric-badge warning">Slightly hyzer</span></div><div class="metric-scale"><i class="target"></i><i class="marker angle-marker"></i></div><div class="metric-labels"><span>Anhyzer</span><span>Flat</span><span>Hyzer</span></div></div>
+              <div class="metric-row"><div class="metric-top"><b>Release path</b><span class="metric-badge success">Flat</span></div><div class="metric-scale"><i class="target"></i><i class="marker path-marker"></i></div><div class="metric-labels"><span>Down</span><span>Flat</span><span>Up</span></div></div>
+            </div>
+            <div class="progress-card">
+              <p class="app-label">Progress</p><strong class="progress-context">Buzzz · RHBH · Straight</strong>
+              <h3>Target hits across your latest 10</h3><p class="app-copy">Filled bars show how many clear readings met each target.</p>
+              <div class="progress-metric"><b>Speed</b><div><span>Latest 10</span><i><em style="--fill:80%"></em></i><strong>8 of 10</strong></div><div class="previous"><span>Previous 10</span><i><em style="--fill:80%"></em></i><strong>8 of 10</strong></div></div>
+              <div class="progress-metric"><b>Disc angle</b><div><span>Latest 10</span><i><em style="--fill:70%"></em></i><strong>7 of 10</strong></div><div class="previous"><span>Previous 10</span><i><em style="--fill:50%"></em></i><strong>5 of 10</strong></div></div>
+              <div class="progress-metric"><b>Release path</b><div><span>Latest 10</span><i><em style="--fill:100%"></em></i><strong>10 of 10</strong></div><div class="previous"><span>Previous 10</span><i><em style="--fill:100%"></em></i><strong>10 of 10</strong></div></div>
+            </div>
+            <div class="next-throw-card"><p class="app-label">Next throw</p><h3>Take a little hyzer off.</h3><p>Buzzz has a balanced flight profile. Starting it closer to flat gives the intended shape more room to develop.</p></div>
+            <div class="preview-actions"><span class="preview-button primary-action">↶&nbsp; Analyze another</span><span class="preview-button secondary-action">◴&nbsp; View session</span></div>
+          </section>
+        </div>
       </div>
     </section>
 
     <section class="section section-dark" id="analysis">
       <div class="shell feature-grid reverse">
-        <figure class="phone screen-left"><picture><source srcset="assets/home.webp" type="image/webp"><img src="assets/home.png" alt="ThrowLab capture screen with disc, throw style, and intended line selections" width="946" height="2048" loading="lazy"></picture></figure>
+        <div class="app-preview capture-preview" aria-label="ThrowLab capture setup showing disc, throw style, and intended line selections">
+          <section class="app-card capture-card">
+            <header class="app-section-title"><span>01</span><div><h2>Capture your throw</h2></div></header>
+            <p class="app-label">Select your disc</p><div class="select-field"><strong>Buzzz · Discraft</strong><span>⌄</span></div>
+            <p class="app-label">Select your throw style</p><div class="segmented four"><strong>RHBH</strong><span>RHFH</span><span>LHBH</span><span>LHFH</span></div>
+            <p class="app-label">Intended line</p><div class="segmented three"><strong>Straight</strong><span>Hyzer</span><span>Anhyzer</span></div>
+            <p class="app-label">For accurate results</p><div class="check-grid"><span><i>✓</i>Landscape</span><span><i>✓</i>Side view</span><span><i>✓</i>Trimmed to throw</span><span><i>✓</i>240 fps slow-mo</span></div>
+            <div class="preview-button primary-action full-action"><span class="upload-icon">▣</span> Upload video</div>
+          </section>
+        </div>
         <div class="feature-copy">
           <p class="eyebrow">Release analysis</p>
           <h2>Understand your release.</h2>
@@ -115,32 +142,30 @@
     </section>
 
     <section class="section section-band" id="sessions">
-      <div class="shell section-heading">
-        <p class="eyebrow">Progress and practice sessions</p>
-        <h2>See how your throws are trending.</h2>
-        <p>Throws with the same disc, throwing style, and intended line are tracked together. Throws made in the same practice window are grouped into a session so you can review them together.</p>
-      </div>
       <div class="shell progress-session-grid">
-        <div class="feature-copy">
+        <div class="feature-copy session-copy">
+          <p class="eyebrow">Progress and practice sessions</p>
+          <h2>See how your throws are trending.</h2>
+          <p>Throws with the same disc, throwing style, and intended line are tracked together. Throws made in the same practice window are grouped into a session, keeping every result from that practice run in one place.</p>
           <div class="stat-row"><div><strong>8 of 10</strong><span>Speed target hits</span></div><div><strong>7 of 10</strong><span>Angle target hits</span></div><div><strong>10 of 10</strong><span>Path target hits</span></div></div>
-          <p>Only throws with the same disc, throwing style, and intended line count toward each other, so your targets reflect one throw, not an average across your whole bag.</p>
+          <p>Each target reflects one specific throw setup, not an average across every disc in your bag.</p>
           <ul class="clean-list">
-            <li>Sessions form automatically from your practice window</li>
-            <li>Targets start at 5 qualifying throws, then expand to 10</li>
-            <li>Speed, angle, and path are tracked as separate hit rates</li>
+            <li>Sessions form automatically during a practice window</li>
+            <li>Targets begin after 5 qualifying throws, then use the latest 10</li>
+            <li>Speed, angle, and path keep their own hit rates</li>
           </ul>
         </div>
-        <div class="session-demo" aria-label="Interactive practice session example">
+        <div class="session-demo" aria-label="Example of recent practice sessions">
           <div class="session-demo-head">
             <span>Recent sessions</span>
-            <small>Tap a session to expand it</small>
+            <small>Sessions grouped by practice window</small>
           </div>
           <div class="session-item open">
-            <button class="session-toggle" type="button" aria-expanded="true">
+            <div class="session-toggle">
               <span class="session-dot"></span>
               <strong>Sep 13 · 6:30 PM · 4 throws</strong>
               <span class="session-chevron" aria-hidden="true">⌃</span>
-            </button>
+            </div>
             <div class="session-throws">
               <div class="throw-row"><div><strong>Buzzz</strong><small>RHBH · Straight</small></div><p>Speed: Matched · Disc angle: Flat · Release path: Flat</p></div>
               <div class="throw-row"><div><strong>TL3</strong><small>RHBH · Straight</small></div><p>Speed: Matched · Disc angle: Slightly hyzer · Release path: Flat</p></div>
@@ -149,25 +174,17 @@
             </div>
           </div>
           <div class="session-item">
-            <button class="session-toggle" type="button" aria-expanded="false">
+            <div class="session-toggle">
               <span class="session-dot"></span>
               <strong>Sep 12 · 3:00 PM · 6 throws</strong>
               <span class="session-chevron" aria-hidden="true">⌄</span>
-            </button>
-            <div class="session-throws" hidden>
-              <div class="throw-row"><div><strong>Buzzz</strong><small>RHBH · Hyzer</small></div><p>Speed: Matched · Disc angle: Slightly hyzer · Release path: Flat</p></div>
-              <div class="throw-row"><div><strong>Reactor</strong><small>RHBH · Straight</small></div><p>Speed: Matched · Disc angle: Flat · Release path: Flat</p></div>
             </div>
           </div>
           <div class="session-item">
-            <button class="session-toggle" type="button" aria-expanded="false">
+            <div class="session-toggle">
               <span class="session-dot"></span>
               <strong>Sep 11 · 12:29 PM · 10 throws</strong>
               <span class="session-chevron" aria-hidden="true">⌄</span>
-            </button>
-            <div class="session-throws" hidden>
-              <div class="throw-row"><div><strong>Wraith</strong><small>RHFH · Hyzer</small></div><p>Speed: Slightly low · Disc angle: Hyzer · Release path: Flat</p></div>
-              <div class="throw-row"><div><strong>Crave</strong><small>RHBH · Straight</small></div><p>Speed: Matched · Disc angle: Flat · Release path: Flat</p></div>
             </div>
           </div>
         </div>
@@ -176,7 +193,20 @@
 
     <section class="section section-dark" id="discs">
       <div class="shell feature-grid reverse">
-        <figure class="phone screen-left"><picture><source srcset="assets/bag.webp" type="image/webp"><img src="assets/bag.png" alt="ThrowLab My Bag screen with five saved discs and flight numbers" width="946" height="2048" loading="lazy"></picture></figure>
+        <div class="app-preview bag-preview" aria-label="ThrowLab My Bag showing five saved discs and flight numbers">
+          <section class="app-card bag-card">
+            <header class="app-section-title"><span>01</span><div><h2>Discs</h2><p>Choose a disc from your bag or add a new one.</p></div></header>
+            <div class="bag-tabs"><strong>My Bag</strong><span>Compare</span></div>
+            <div class="disc-list">
+              <div class="disc-row"><i></i><div><b>Wraith</b><span>Innova · Distance Driver</span><small>11 · 5 · −1 · 3</small></div><em>Delete</em></div>
+              <div class="disc-row"><i></i><div><b>Firebird</b><span>Innova · Fairway Driver</span><small>9 · 3 · 0 · 4</small></div><em>Delete</em></div>
+              <div class="disc-row"><i></i><div><b>Crave</b><span>Axiom Discs · Fairway Driver</span><small>6.5 · 5 · −1 · 1</small></div><em>Delete</em></div>
+              <div class="disc-row"><i></i><div><b>Buzzz</b><span>Discraft · Midrange</span><small>5 · 4 · −1 · 1</small></div><em>Delete</em></div>
+              <div class="disc-row selected"><i></i><div><b>Reactor</b><span>MVP · Midrange</span><small>5 · 5 · −0.5 · 1.5</small></div><em>Delete</em></div>
+            </div>
+            <div class="preview-actions bag-actions"><span class="preview-button secondary-action">＋&nbsp; Add a disc</span><span class="preview-button primary-action">▣&nbsp; Back to capture</span></div>
+          </section>
+        </div>
         <div class="feature-copy">
           <p class="eyebrow">Your discs</p>
           <h2>Manage your bag.</h2>
@@ -200,7 +230,7 @@
           <li><b>03</b><div><h3>Find the disc</h3><p>Move to a clear early-flight frame, center the disc, and tap Analyze.</p></div></li>
           <li><b>04</b><div><h3>Review and repeat</h3><p>Review the release and progress, then add another throw to the session.</p></div></li>
         </ol>
-        <figure class="phone finder-phone"><picture><source srcset="assets/find-disc.webp" type="image/webp"><img src="assets/find-disc.png" alt="ThrowLab Find the Disc screen with a disc centered in early flight" width="946" height="2048" loading="lazy"></picture></figure>
+        <figure class="phone finder-phone"><picture><img src="assets/find-disc.webp" alt="ThrowLab Find the Disc screen with a disc centered in early flight" width="600" height="1298" loading="lazy"></picture></figure>
       </div>
     </section>
 
@@ -227,23 +257,12 @@
     <section class="download-section"><div class="shell download-card"><img src="assets/app-icon.png" alt="ThrowLab app icon" width="112" height="112"><div><p class="eyebrow">Available for iPhone</p><h2>Build consistency one throw at a time.</h2><p>Try every analysis feature free for 3 days. Continue for $4.99/month or $39.99/year.</p></div><a class="button primary" href="https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743">Get ThrowLab on the App Store</a></div></section>
   </main>
 
-  <footer class="footer shell"><a class="brand" href="/"><img src="assets/throwlab-mark-clean.png" alt="" width="32" height="20"><span>ThrowLab</span></a><div class="footer-links"><a href="support/">Support</a><a href="privacy/">Privacy</a><a href="terms/">Terms</a></div><p>Measurements are estimates. Throw safely.</p></footer>
+  <footer class="footer shell"><a class="brand" href="/"><img src="assets/throwlab-mark-clean.webp" alt="" width="32" height="20"><span>ThrowLab</span></a><div class="footer-links"><a href="support/">Support</a><a href="privacy/">Privacy</a><a href="terms/">Terms</a></div><p>Measurements are estimates. Throw safely.</p></footer>
   <script>
     const toggle=document.getElementById('nav-toggle'),links=document.getElementById('nav-links');
     if(toggle&&links){toggle.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close menu':'Open menu')});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));}
-    document.querySelectorAll('.session-toggle').forEach(button=>{
-      button.addEventListener('click',()=>{
-        const item=button.closest('.session-item');
-        const content=item.querySelector('.session-throws');
-        const open=button.getAttribute('aria-expanded')==='true';
-        button.setAttribute('aria-expanded',String(!open));
-        item.classList.toggle('open',!open);
-        content.hidden=open;
-        button.querySelector('.session-chevron').textContent=open?'⌄':'⌃';
-      });
-    });
     if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-      const revealItems=document.querySelectorAll('.section .feature-copy,.section .phone,.section .session-demo,.section-heading,.next-card,.setup-grid,.faq');
+      const revealItems=document.querySelectorAll('.section .feature-copy,.section .phone,.section .app-preview,.section .session-demo,.section-heading,.next-card,.setup-grid,.faq');
       revealItems.forEach(item=>item.classList.add('reveal'));
       const observer=new IntersectionObserver(entries=>{
         entries.forEach(entry=>{
