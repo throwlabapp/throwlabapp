@@ -294,3 +294,95 @@ img{display:block;max-width:100%;height:auto}a{color:inherit}.shell{width:min(11
 /* v55: static session preview preserves the app's original session structure */
 #sessions .session-toggle{grid-template-columns:10px 1fr 20px}
 #sessions .session-demo-head small{max-width:145px;text-align:right;line-height:1.25}
+
+/* v56: mobile-first pass — more vertical breathing room, cleaner hero bullets */
+@media(max-width:680px){
+  .hero{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    padding-block:44px 48px;
+  }
+  .hero-copy{
+    display:flex;
+    flex-direction:column;
+  }
+  .eyebrow{
+    margin-bottom:18px;
+    justify-content:center;
+    align-self:center;
+  }
+  .hero-title{
+    margin-bottom:4px;
+  }
+  .hero-lead{
+    margin:20px 0 30px;
+    max-width:520px;
+    margin-inline:auto;
+  }
+  .hero-actions{
+    gap:18px;
+    margin-bottom:34px;
+  }
+  .store-cta{
+    gap:10px;
+  }
+  .store-subtext{
+    font-size:.78rem;
+  }
+  .trust-list{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    margin-top:0;
+    padding-top:26px;
+    border-top:1px solid rgba(143,163,190,.22);
+    width:min(100%,340px);
+    margin-inline:auto;
+  }
+  .trust-list li{
+    justify-content:center;
+    font-size:.88rem;
+  }
+  .section{
+    padding-block:64px;
+  }
+  .section-heading{
+    margin-bottom:34px;
+  }
+  .feature-grid,
+  .feature-grid.reverse,
+  .workflow,
+  .progress-session-grid{
+    gap:44px;
+  }
+  .feature-copy h2{
+    margin-bottom:18px;
+  }
+  .feature-copy>p:not(.eyebrow){
+    margin-bottom:0;
+  }
+  .measure-list{
+    margin:28px 0 26px;
+  }
+  .clean-list{
+    margin:26px 0;
+    gap:14px;
+  }
+  .faq-layout>div:first-child{
+    margin-bottom:8px;
+  }
+  .faq summary{
+    padding:22px 0;
+  }
+}
+
+@media(max-width:390px){
+  .hero-lead{
+    max-width:100%;
+  }
+  .trust-list{
+    width:100%;
+  }
+}
