@@ -278,6 +278,42 @@ img{display:block;max-width:100%;height:auto}a{color:inherit}.shell{width:min(11
 #sessions .progress-session-grid{align-items:center;margin-top:0}
 #sessions .session-copy h2{margin-bottom:18px}
 #sessions .session-copy>.eyebrow{margin-bottom:14px}
+
+/* Milestones and Compare previews follow the simulator's current screens. */
+.milestone-card .app-section-title,.compare-card .app-section-title{margin-bottom:17px}
+.history-tabs strong,.compare-card .bag-tabs strong{background:#687487}
+.milestone-block{margin-top:17px}.milestone-block>.app-label{margin-bottom:8px}
+.goal-row{display:flex;align-items:center;gap:10px;margin-top:7px;padding:9px 10px;border:1px solid #214063;border-radius:10px;background:#071629}
+.goal-row.featured{border-color:rgba(36,213,238,.55);background:#103042}
+.goal-row>div{min-width:0;flex:1}.goal-row b,.goal-row small{display:block}.goal-row b{font-size:.78rem}.goal-row small{margin-top:3px;color:#91a6bf;font-size:.59rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.goal-row>strong{color:#24d5ee;font:700 .62rem ui-monospace,SFMono-Regular,Menlo,monospace}.goal-row:not(.featured)>strong{color:#91a6bf}
+.goal-ring{flex:none;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:radial-gradient(closest-side,#0b2036 75%,transparent 78%),conic-gradient(#24d5ee var(--goal),#214063 0);font:800 .68rem ui-monospace,SFMono-Regular,Menlo,monospace}
+.goal-ring.green{background:radial-gradient(closest-side,#071629 75%,transparent 78%),conic-gradient(#48df8a var(--goal),#214063 0)}
+.goal-track{height:5px;overflow:hidden;margin-top:9px;border-radius:9px;background:#214063}.goal-track span{display:block;height:100%;border-radius:inherit;background:#24d5ee}.goal-track.blue span{background:#438cff}
+.bag-goal>div:not(.goal-track){display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.68rem}.bag-goal strong{color:#24d5ee;font:700 .68rem ui-monospace,SFMono-Regular,Menlo,monospace}
+.earned-row{display:flex;align-items:center;gap:8px;padding:10px;border-radius:10px;background:#071629;font-size:.7rem}.earned-row span,.earned-row strong{color:#48df8a}.earned-row span{font-size:1.05rem}.earned-row b{flex:1}.earned-row strong{font:800 .54rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em}
+.compare-preview{width:min(100%,440px)}.compare-content{margin-top:17px}.compare-content>.app-label{display:flex;justify-content:space-between;margin:12px 0 7px}.compare-content>.app-label span{color:#8fa3be}
+.disc-chips{display:grid;grid-template-columns:1fr 1fr;gap:6px}.disc-chips>div{min-height:43px;display:grid;grid-template-columns:7px 1fr;align-content:center;align-items:center;column-gap:7px;padding:6px 9px;border:1px solid #214063;border-radius:9px;background:#071629}.disc-chips>div.cyan{border-color:rgba(36,213,238,.55)}.disc-chips>div.yellow{border-color:rgba(251,204,20,.55)}.disc-chips>div.green{border-color:rgba(72,223,138,.55)}.disc-chips i{grid-row:1/3;width:7px;height:7px;border-radius:50%;background:currentColor}.disc-chips .cyan{color:#24d5ee}.disc-chips .yellow{color:#fbcc14}.disc-chips .green{color:#48df8a}.disc-chips b{color:#f0f6ff;font-size:.65rem}.disc-chips small{color:#8fa3be;font:500 .52rem ui-monospace,SFMono-Regular,Menlo,monospace}.disc-chips .add-chip{display:flex;align-items:center;justify-content:center;color:#f0f6ff;font-size:.65rem;font-weight:750}
+.compare-options{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;padding:3px;border:1px solid #214063;border-radius:9px;background:#071629}.compare-options.four{grid-template-columns:repeat(4,1fr)}.compare-options>*{min-height:30px;display:grid;place-items:center;color:#8fa3be;font-size:.56rem;font-weight:800;text-transform:uppercase}.compare-options strong{border-radius:6px;color:#071224;background:#24d5ee}
+.flight-chart{position:relative;height:315px;overflow:hidden;margin-top:12px;border:1px solid #214063;border-radius:12px;background:linear-gradient(#081429,#071629)}.flight-chart svg{display:block;width:100%;height:100%}.chart-grid{stroke:#24d5ee;stroke-opacity:.1;stroke-width:1}.chart-center{stroke:#214063;stroke-width:1;stroke-dasharray:4 5}.flight-line{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.flight-line.cyan{stroke:#24d5ee;stroke-width:3.4}.flight-line.yellow{stroke:#fbcc14}.flight-line.green{stroke:#48df8a}.flight-end.cyan{fill:#24d5ee}.flight-end.yellow{fill:#fbcc14}.flight-end.green{fill:#48df8a}.release-point{fill:#f0f6ff}.flight-label{position:absolute;left:10px;right:10px;color:#8fa3be;font:800 .5rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.05em}.flight-label.top{top:9px;display:flex;justify-content:space-between}.flight-label.bottom{bottom:9px;text-align:center}.chart-note{margin:8px 0 0;color:#8fa3be;font-size:.59rem;line-height:1.45}
+@media(max-width:1100px){.nav{flex-wrap:wrap}.nav-toggle{display:block}.nav-links{order:3;flex-basis:100%;display:none;flex-direction:column;align-items:flex-start;gap:0;padding-bottom:15px}.nav-links.open{display:flex}.nav-links a{width:100%;padding:10px 0;border-top:1px solid var(--line)}}
+@media(max-width:920px){.milestone-preview,.compare-preview{justify-self:center}.feature-grid.reverse .milestone-preview,.feature-grid.reverse .compare-preview{order:2}}
+@media(max-width:680px){.milestone-preview,.compare-preview{width:min(94%,360px)}.goal-row small{font-size:.54rem}.flight-chart{height:280px}}
+
+/* Alternating feature layout and the simulator's analysis panel. */
+#discs .feature-grid{grid-template-columns:minmax(0,1fr) minmax(300px,410px)}
+#discs .feature-copy{grid-column:1;grid-row:1;justify-self:start}
+#discs .bag-preview{grid-column:2;grid-row:1;justify-self:end}
+.result-card .metrics-panel{padding:15px 16px;border-color:#214063;border-radius:10px;background:#071225}
+.result-card .metric-row{margin-top:13px}
+.result-card .metric-top b{font-size:.66rem;letter-spacing:.08em}
+.result-card .metric-badge{padding:5px 9px;border-color:rgba(72,223,138,.35);background:rgba(72,223,138,.14);font-size:.6rem;letter-spacing:.02em}
+.result-card .metric-badge.warning{border-color:rgba(251,204,20,.35);background:rgba(251,204,20,.14)}
+.result-card .metric-scale{margin-top:7px}
+.result-card .metric-labels{font-size:.61rem}
+.result-card .progress-card,.result-card .next-throw-card{border-radius:10px}
+@media(max-width:920px){#discs .feature-grid{grid-template-columns:1fr}#discs .feature-copy,#discs .bag-preview{grid-column:auto;grid-row:auto;justify-self:center}#discs .feature-copy{justify-self:start}#discs .bag-preview{order:2}}
+@media(max-width:680px){#analysis h2{white-space:normal}}
 #sessions .session-copy>p{margin:0}
 #sessions .session-copy .stat-row{margin:24px 0 20px}
 #sessions .session-copy .clean-list{margin:22px 0 0}

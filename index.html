@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Disc Golf Throw Analyzer for iPhone | ThrowLab</title>
-  <meta name="description" content="Build a more consistent disc golf throw. ThrowLab analyzes speed, disc angle, and release path from slow-motion video, then tracks progress by disc, throwing style, and intended line.">
+  <meta name="description" content="Analyze your disc golf release from slow-motion video, track milestones, and compare estimated flight paths for the discs in your bag.">
   <meta name="theme-color" content="#050b18">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://throwlabapp.com/">
@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ThrowLab">
   <meta property="og:title" content="ThrowLab | Build a More Consistent Disc Golf Throw">
-  <meta property="og:description" content="Analyze your release, compare like-for-like throws, and track progress across practice sessions on iPhone.">
+  <meta property="og:description" content="Review your release, track dialed-in throws, and compare disc flight paths on iPhone.">
   <meta property="og:url" content="https://throwlabapp.com/">
   <meta property="og:image" content="https://throwlabapp.com/assets/og-1200x630.png">
   <meta property="og:image:alt" content="ThrowLab disc golf analyzer app">
@@ -27,13 +27,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"ThrowLab","applicationCategory":"SportsApplication","operatingSystem":"iOS","url":"https://throwlabapp.com/","downloadUrl":"https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743","description":"ThrowLab is a disc golf throw analyzer for iPhone that evaluates speed, disc angle, and release path from slow-motion video and tracks consistency by disc, throwing style, and intended line.","offers":[{"@type":"Offer","name":"ThrowLab Pro monthly","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"ThrowLab Pro yearly","price":"39.99","priceCurrency":"USD"}],"image":"https://throwlabapp.com/assets/app-icon.png","screenshot":["https://throwlabapp.com/assets/analysis.webp","https://throwlabapp.com/assets/home.webp","https://throwlabapp.com/assets/bag.webp"],"featureList":["Disc golf release analysis","Speed, disc angle, and release path ratings","Progress tracking by disc, style, and intended line","Automatic practice sessions","Next Throw guidance","Disc bag and flight-number comparison","On-device video processing"]}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"ThrowLab","applicationCategory":"SportsApplication","operatingSystem":"iOS","url":"https://throwlabapp.com/","downloadUrl":"https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743","description":"ThrowLab evaluates speed, disc angle, and release path from slow-motion video, tracks milestones, and compares estimated disc flight paths.","offers":[{"@type":"Offer","name":"ThrowLab Pro monthly","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"ThrowLab Pro yearly","price":"39.99","priceCurrency":"USD"}],"image":"https://throwlabapp.com/assets/app-icon.png","screenshot":["https://throwlabapp.com/assets/analysis.webp","https://throwlabapp.com/assets/home.webp","https://throwlabapp.com/assets/bag.webp"],"featureList":["Disc golf release analysis","Speed, disc angle, and release path ratings","Progress tracking by disc, style, and intended line","Automatic practice sessions","Milestones for dialed-in throws","Estimated flight path comparison","On-device video processing"]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"What does ThrowLab analyze?","acceptedAnswer":{"@type":"Answer","text":"ThrowLab analyzes release speed, disc angle, and release path from slow-motion video. Results are relative ratings rather than exact miles per hour or degree measurements."}},
     {"@type":"Question","name":"How does ThrowLab track disc golf consistency?","acceptedAnswer":{"@type":"Answer","text":"ThrowLab compares throws made with the same disc, throwing style, and intended line. It tracks how often speed, disc angle, and release path reach their individual targets."}},
     {"@type":"Question","name":"How are practice sessions created?","acceptedAnswer":{"@type":"Answer","text":"Throws made within the same practice window are grouped automatically. Each session keeps the disc, throwing style, intended line, and results for every throw together."}},
+    {"@type":"Question","name":"How do milestones work?","acceptedAnswer":{"@type":"Answer","text":"A dialed-in throw counts when speed matches its target, disc angle matches the selected line with a clear enough reading, and release path is level. ThrowLab tracks goals for each disc, throwing style, and line, plus totals across your bag."}},
+    {"@type":"Question","name":"What does Compare show?","acceptedAnswer":{"@type":"Answer","text":"Compare overlays estimated flight paths from manufacturer flight ratings. Choose up to four discs, an arm power tier, and a throwing style. The chart is a guide, not a measurement of your actual flight."}},
     {"@type":"Question","name":"Can ThrowLab analyze backhand and forehand throws?","acceptedAnswer":{"@type":"Answer","text":"Yes. ThrowLab supports right-handed and left-handed backhand and forehand throws, plus straight, hyzer, and anhyzer intended lines."}},
     {"@type":"Question","name":"Can I use ThrowLab with a practice net?","acceptedAnswer":{"@type":"Answer","text":"Yes. The disc does not need to land on camera. It needs to remain visible for several frames after release."}},
     {"@type":"Question","name":"Are throw videos uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. Throw videos are processed on the iPhone and are not uploaded for analysis. No account is required."}},
@@ -70,7 +72,7 @@
   <header class="site-header">
     <nav class="nav shell" aria-label="Main navigation">
       <a class="brand" href="/" aria-label="ThrowLab home"><img src="assets/throwlab-mark-clean.webp" alt="" width="35" height="22"><span>ThrowLab</span></a>
-      <div class="nav-links" id="nav-links"><a href="#analysis">Analysis</a><a href="#sessions">Sessions</a><a href="#discs">Discs</a><a href="#how-it-works">How it works</a><a href="support/">Support</a></div>
+      <div class="nav-links" id="nav-links"><a href="#analysis">Analysis</a><a href="#sessions">Sessions</a><a href="#milestones">Milestones</a><a href="#discs">Discs</a><a href="#compare">Compare</a><a href="#how-it-works">How it works</a><a href="support/">Support</a></div>
       <div class="nav-right"><a class="nav-cta" href="https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743">Get ThrowLab</a><button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button></div>
     </nav>
   </header>
@@ -92,10 +94,10 @@
         <ul class="trust-list"><li>5 free throw analyses</li><li>Video stays on your iPhone</li><li>Works in a field or into a net</li><li>No extra hardware</li></ul>
       </div>
       <div class="hero-visual">
-        <div class="app-preview analysis-preview" aria-label="ThrowLab analysis showing speed, disc angle, release path, progress, and next throw guidance">
+        <div class="app-preview analysis-preview" aria-label="ThrowLab analysis showing speed, disc angle, release path, and progress">
           <section class="app-card result-card">
             <header class="app-card-heading"><div><h2>Analysis</h2><p>Buzzz · RHBH · Straight · 19 tracked frames</p></div></header>
-            <div class="metrics-panel">
+            <div class="metrics-panel" aria-label="Release ratings for the completed simulator analysis">
               <div class="target-legend"><i></i><span>Target range</span></div>
               <div class="metric-row"><div class="metric-top"><b>Speed</b><span class="metric-badge warning">Slightly low</span></div><div class="metric-scale"><i class="target"></i><i class="marker speed-marker"></i></div><div class="metric-labels"><span>Low</span><span>Matched</span><span>High</span></div></div>
               <div class="metric-row"><div class="metric-top"><b>Disc angle</b><span class="metric-badge warning">Slightly hyzer</span></div><div class="metric-scale"><i class="target"></i><i class="marker angle-marker"></i></div><div class="metric-labels"><span>Anhyzer</span><span>Flat</span><span>Hyzer</span></div></div>
@@ -108,8 +110,6 @@
               <div class="progress-metric"><b>Disc angle</b><div><span>Latest 10</span><i><em style="--fill:70%"></em></i><strong>7 of 10</strong></div><div class="previous"><span>Previous 10</span><i><em style="--fill:50%"></em></i><strong>5 of 10</strong></div></div>
               <div class="progress-metric"><b>Release path</b><div><span>Latest 10</span><i><em style="--fill:100%"></em></i><strong>10 of 10</strong></div><div class="previous"><span>Previous 10</span><i><em style="--fill:100%"></em></i><strong>10 of 10</strong></div></div>
             </div>
-            <div class="next-throw-card"><p class="app-label">Next throw</p><h3>Take a little hyzer off.</h3><p>Buzzz has a balanced flight profile. Starting it closer to flat gives the intended shape more room to develop.</p></div>
-            <div class="preview-actions"><span class="preview-button primary-action">↶&nbsp; Analyze another</span><span class="preview-button secondary-action">◴&nbsp; View session</span></div>
           </section>
         </div>
       </div>
@@ -129,7 +129,7 @@
         </div>
         <div class="feature-copy">
           <p class="eyebrow">Release analysis</p>
-          <h2>Understand your release.</h2>
+          <h2>See how your release measures up.</h2>
           <p>Choose your disc, throwing style, and intended line before you analyze. ThrowLab evaluates speed, disc angle, and release path against the target for that throw.</p>
           <div class="measure-list">
             <div><span>Speed</span><p>Relative to the selected disc and throw.</p></div>
@@ -145,10 +145,10 @@
       <div class="shell progress-session-grid">
         <div class="feature-copy session-copy">
           <p class="eyebrow">Progress and practice sessions</p>
-          <h2>See how your throws are trending.</h2>
+          <h2>Turn every practice session into progress you can see.</h2>
           <p>Throws with the same disc, throwing style, and intended line are tracked together. Throws made in the same practice window are grouped into a session, keeping every result from that practice run in one place.</p>
           <div class="stat-row"><div><strong>8 of 10</strong><span>Speed target hits</span></div><div><strong>7 of 10</strong><span>Angle target hits</span></div><div><strong>10 of 10</strong><span>Path target hits</span></div></div>
-          <p>Each target reflects one specific throw setup, not an average across every disc in your bag.</p>
+          <p>The comparison stays with that disc and line. A different setup starts its own history.</p>
           <ul class="clean-list">
             <li>Sessions form automatically during a practice window</li>
             <li>Targets begin after 5 qualifying throws, then use the latest 10</li>
@@ -191,7 +191,40 @@
       </div>
     </section>
 
-    <section class="section section-dark" id="discs">
+    <section class="section section-dark" id="milestones">
+      <div class="shell feature-grid reverse">
+        <div class="app-preview milestone-preview" aria-label="Example Milestones screen: Firebird has three of five dialed-in throws toward its next goal, with eight of ten across the bag">
+          <section class="app-card milestone-card">
+            <header class="app-section-title"><span>02</span><div><h2>Recent sessions</h2><p>Throws within a practice window are grouped into sessions.</p></div></header>
+            <div class="bag-tabs history-tabs"><span>Sessions</span><strong>Milestones</strong></div>
+            <div class="milestone-block">
+              <p class="app-label">Up next</p>
+              <div class="goal-row featured"><span class="goal-ring" style="--goal:60%">3</span><div><b>Firebird</b><small>Hyzer · RHBH · Goal: 5 dialed in</small></div><strong>3/5</strong></div>
+              <div class="goal-track"><span style="width:60%"></span></div>
+            </div>
+            <div class="milestone-block">
+              <p class="app-label">Your discs</p>
+              <div class="goal-row"><span class="goal-ring green" style="--goal:40%">2</span><div><b>Sidewinder</b><small>Straight · RHBH · Goal: 5 dialed in</small></div><strong>2/5</strong></div>
+              <div class="goal-row"><span class="goal-ring green" style="--goal:40%">2</span><div><b>Valkyrie</b><small>Straight · RHBH · Goal: 5 dialed in</small></div><strong>2/5</strong></div>
+            </div>
+            <div class="milestone-block bag-goal"><p class="app-label">Across your bag</p><div><b>10 dialed-in throws, any disc</b><strong>8/10</strong></div><div class="goal-track blue"><span style="width:80%"></span></div></div>
+            <div class="milestone-block"><p class="app-label">Earned</p><div class="earned-row"><span aria-hidden="true">✓</span><b>First Match</b><strong>EARNED</strong></div></div>
+          </section>
+        </div>
+        <div class="feature-copy">
+          <p class="eyebrow">Milestones</p>
+          <h2>Reach your goals one matched throw at a time.</h2>
+          <p>A dialed-in throw moves its disc toward the next goal. Firebird has three of five in this example, while the total across the bag is eight.</p>
+          <div class="measure-list">
+            <div><span>Each setup</span><p>Goals follow the disc, throwing style, and intended line you used.</p></div>
+            <div><span>Your bag</span><p>Dialed-in throws also count toward your overall milestones.</p></div>
+            <div><span>Earned</span><p>See the milestones you have reached, even after older sessions leave your recent history.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-band" id="discs">
       <div class="shell feature-grid reverse">
         <div class="app-preview bag-preview" aria-label="ThrowLab My Bag showing five saved discs and flight numbers">
           <section class="app-card bag-card">
@@ -209,12 +242,51 @@
         </div>
         <div class="feature-copy">
           <p class="eyebrow">Your discs</p>
-          <h2>Manage your bag.</h2>
+          <h2>Analysis that knows every disc in your bag.</h2>
           <p>Add each disc you throw and ThrowLab remembers its flight numbers, so every analysis is measured against the right disc instead of a generic average.</p>
           <div class="measure-list">
             <div><span>My Bag</span><p>Every disc you throw, with speed, glide, turn, and fade at a glance.</p></div>
-            <div><span>Compare</span><p>Search more than 2,400 discs to find a match by flight numbers.</p></div>
-            <div><span>Swap in</span><p>Replace a worn or lost disc without losing its throw history.</p></div>
+            <div><span>Compare</span><p>Choose other discs for a side-by-side flight chart.</p></div>
+            <div><span>Selected disc</span><p>Keep the disc you are analyzing close at hand.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section section-dark" id="compare">
+      <div class="shell feature-grid reverse">
+        <div class="app-preview compare-preview" aria-label="Example Compare screen with Firebird, Sidewinder, and Valkyrie at Pro arm power, with estimated flight paths overlaid from one release point">
+          <section class="app-card compare-card">
+            <header class="app-section-title"><span>01</span><div><h2>Compare</h2><p>Overlay flight paths from the same launch point.</p></div></header>
+            <div class="bag-tabs"><span>My Bag</span><strong>Compare</strong></div>
+            <div class="compare-content">
+              <p class="app-label">Flight chart <span>RHBH</span></p>
+              <div class="disc-chips"><div class="cyan"><i></i><b>Firebird</b><small>9 · 3 · 0 · 4</small></div><div class="yellow"><i></i><b>Sidewinder</b><small>9 · 5 · −3 · 1</small></div><div class="green"><i></i><b>Valkyrie</b><small>9 · 4 · −2 · 2</small></div><div class="add-chip">＋ Add disc</div></div>
+              <p class="app-label">Arm power</p><div class="compare-options"><span>Beginner</span><span>Intermediate</span><strong>Pro</strong></div>
+              <p class="app-label">Throw style</p><div class="compare-options four"><strong>RHBH</strong><span>RHFH</span><span>LHBH</span><span>LHFH</span></div>
+              <div class="flight-chart" role="img" aria-label="Pro power estimated flight paths: Firebird finishes left, Sidewinder turns farther right, and Valkyrie turns right then fades. All start from the same release point.">
+                <svg viewBox="0 0 360 315" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                  <path class="chart-grid" d="M0 63H360 M0 126H360 M0 189H360 M0 252H360"/><path class="chart-center" d="M180 19V296"/>
+                  <path class="flight-line cyan" d="M180 296 L180 286 L180 276 L180 266 L180 255 L180 245 L180 235 L180 225 L180 215 L179 204 L179 194 L178 184 L177 174 L175 164 L171 154 L166 144 L159 135 L152 125 L145 116 L138 106 L130 97"/>
+                  <path class="flight-line yellow" d="M180 296 L180 285 L180 274 L180 264 L180 253 L181 242 L183 231 L187 221 L191 210 L195 199 L201 189 L206 179 L212 168 L217 158 L223 147 L228 137 L232 126 L236 116 L239 105 L241 94 L242 83"/>
+                  <path class="flight-line green" d="M180 296 L180 286 L180 275 L180 265 L180 254 L181 244 L182 233 L185 223 L188 212 L192 202 L196 192 L200 181 L204 171 L208 161 L212 151 L214 140 L215 130 L214 119 L212 109 L208 98 L202 88"/>
+                  <circle class="flight-end cyan" cx="130" cy="97" r="4"/><circle class="flight-end yellow" cx="242" cy="83" r="4"/><circle class="flight-end green" cx="202" cy="88" r="4"/><circle class="release-point" cx="180" cy="296" r="5"/>
+                </svg>
+                <div class="flight-label top"><span>L</span><span>DOWNFIELD</span><span>R</span></div><div class="flight-label bottom">RELEASE</div>
+              </div>
+              <p class="chart-note">Estimated from manufacturer flight ratings. Power, plastic, wear, wind, and release angle affect actual flight.</p>
+            </div>
+          </section>
+        </div>
+        <div class="feature-copy">
+          <p class="eyebrow">Compare discs</p>
+          <h2>Pick the disc with the flight you want.</h2>
+          <p>Put up to four discs on one flight chart. Change arm power or throwing style to see how the estimated paths shift. It is a quick way to look at the discs in your bag side by side.</p>
+          <div class="measure-list">
+            <div><span>One chart</span><p>Each path starts from the same release point.</p></div>
+            <div><span>Your choice</span><p>Start with a disc from your bag, then add others to compare.</p></div>
+            <div><span>A guide</span><p>The paths come from flight ratings. They are not recordings of your throws.</p></div>
           </div>
         </div>
       </div>
@@ -222,7 +294,7 @@
 
 
     <section class="section section-band" id="how-it-works">
-      <div class="shell section-heading"><p class="eyebrow">How it works</p><h2>How ThrowLab works.</h2><p>Set up the throw, record in slow motion, then find the disc and let ThrowLab do the rest.</p></div>
+      <div class="shell section-heading"><p class="eyebrow">How it works</p><h2>One video, four steps, one clear fix.</h2><p>Set up the throw, record in slow motion, then find the disc and review the result.</p></div>
       <div class="shell workflow reverse">
         <ol class="steps">
           <li><b>01</b><div><h3>Set the throw</h3><p>Choose your disc, throwing style, and intended line.</p></div></li>
@@ -236,17 +308,19 @@
 
     <section class="section section-dark" id="accuracy">
       <div class="shell">
-        <div class="section-heading"><p class="eyebrow">Recording setup</p><h2>Give ThrowLab a clear view of the release.</h2><p>A few habits make the difference between a clean read and a missed one.</p></div>
+        <div class="section-heading"><p class="eyebrow">Recording setup</p><h2>Better footage, a cleaner read.</h2><p>A few habits make the difference between a clean read and a missed one.</p></div>
         <div class="setup-plate"><div><b>240 fps</b><span>Slow motion recommended</span></div><div><b>Landscape</b><span>Room for the throw and early flight</span></div><div><b>Side view</b><span>Keep the hand and disc edge visible</span></div><div><b>Trimmed clip</b><span>Include the complete throw</span></div></div>
       <p class="accuracy"><strong>About accuracy:</strong> Results are estimates derived from video. Camera position, lighting, framing, blur, frame rate, and disc visibility can affect the result.</p>
       </div>
     </section>
 
     <section class="section section-band faq-section">
-      <div class="shell faq-layout"><div><p class="eyebrow">Questions</p><h2>Before your first throw.</h2></div><div class="faq">
+      <div class="shell faq-layout"><div><p class="eyebrow">Questions</p><h2>Answers before you record.</h2></div><div class="faq">
         <details><summary>What does ThrowLab analyze?</summary><p>ThrowLab analyzes speed, disc angle, and release path from slow-motion video. The gauges show relative ratings against target ranges rather than exact miles per hour or degree measurements.</p></details>
         <details><summary>How does progress tracking work?</summary><p>Only throws with the same disc, throwing style, and intended line are compared. ThrowLab tracks target hits for speed, disc angle, and release path separately.</p></details>
         <details><summary>How are practice sessions created?</summary><p>Throws made within the same practice window are grouped automatically. You can have more than one session in a day without using a start or stop button.</p></details>
+        <details><summary>What counts toward a milestone?</summary><p>A dialed-in throw has speed on target, a clear disc-angle reading that matches your line, and a level release path. Goals are tracked by disc, throwing style, and line. Your overall total counts across the bag.</p></details>
+        <details><summary>Are Compare flight paths measured from my videos?</summary><p>No. Compare estimates paths from manufacturer flight ratings. You can overlay up to four discs and choose an arm power tier and throwing style. Actual flight changes with the throw, wind, plastic, and disc wear.</p></details>
         <details><summary>Does it support forehand and left-handed throws?</summary><p>Yes. ThrowLab supports RHBH, RHFH, LHBH, and LHFH, plus straight, hyzer, and anhyzer intended lines.</p></details>
         <details><summary>Can I use it with a practice net?</summary><p>Yes. The disc does not need to land on camera. Keep it visible for several frames after release.</p></details>
         <details><summary>Are my videos uploaded?</summary><p>No. Throw videos are processed on your iPhone and are not uploaded for analysis. No account is required.</p></details>
@@ -254,7 +328,7 @@
       </div></div>
     </section>
 
-    <section class="download-section"><div class="shell download-card"><img src="assets/app-icon.png" alt="ThrowLab app icon" width="112" height="112"><div><p class="eyebrow">Available for iPhone</p><h2>Build consistency one throw at a time.</h2><p>Start with 5 free throw analyses. Continue with ThrowLab Pro for $4.99/month or $39.99/year.</p></div><a class="button primary" href="https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743">Get ThrowLab on the App Store</a></div></section>
+    <section class="download-section"><div class="shell download-card"><img src="assets/app-icon.png" alt="ThrowLab app icon" width="112" height="112"><div><p class="eyebrow">Available for iPhone</p><h2>Try it on your next five throws.</h2><p>Start with 5 free throw analyses. Continue with ThrowLab Pro for $4.99/month or $39.99/year.</p></div><a class="button primary" href="https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743">Get ThrowLab on the App Store</a></div></section>
   </main>
 
   <footer class="footer shell"><a class="brand" href="/"><img src="assets/throwlab-mark-clean.webp" alt="" width="32" height="20"><span>ThrowLab</span></a><div class="footer-links"><a href="support/">Support</a><a href="privacy/">Privacy</a><a href="terms/">Terms</a></div><p>Measurements are estimates. Throw safely.</p></footer>
