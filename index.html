@@ -96,19 +96,19 @@
       <div class="hero-visual">
         <div class="app-preview analysis-preview" aria-label="ThrowLab analysis showing speed, disc angle, release path, and progress">
           <section class="app-card result-card">
-            <header class="app-card-heading"><div><h2>Analysis</h2><p>Buzzz · RHBH · Straight · 19 tracked frames</p></div></header>
+            <header class="app-card-heading"><div><h2>Analysis</h2><p>Firebird · RHBH · Straight · 22 tracked frames</p></div></header>
             <div class="metrics-panel" aria-label="Release ratings for the completed simulator analysis">
               <div class="target-legend"><i></i><span>Target range</span></div>
-              <div class="metric-row"><div class="metric-top"><b>Speed</b><span class="metric-badge warning">Slightly low</span></div><div class="metric-scale"><i class="target"></i><i class="marker speed-marker"></i></div><div class="metric-labels"><span>Low</span><span>Matched</span><span>High</span></div></div>
-              <div class="metric-row"><div class="metric-top"><b>Disc angle</b><span class="metric-badge warning">Slightly hyzer</span></div><div class="metric-scale"><i class="target"></i><i class="marker angle-marker"></i></div><div class="metric-labels"><span>Anhyzer</span><span>Flat</span><span>Hyzer</span></div></div>
-              <div class="metric-row"><div class="metric-top"><b>Release path</b><span class="metric-badge success">Flat</span></div><div class="metric-scale"><i class="target"></i><i class="marker path-marker"></i></div><div class="metric-labels"><span>Down</span><span>Flat</span><span>Up</span></div></div>
+              <div class="metric-row"><div class="metric-top"><b>Speed</b><span class="metric-badge warning">Slightly under</span></div><div class="metric-scale"><i class="target"></i><i class="marker speed-marker"></i></div><div class="metric-labels"><span>Under</span><span>Matched</span><span>Over</span></div></div>
+              <div class="metric-row"><div class="metric-top"><b>Disc angle</b><span class="metric-badge success">Flat</span></div><div class="metric-scale"><i class="target"></i><i class="marker angle-marker"></i></div><div class="metric-labels"><span>Anhyzer</span><span>Flat</span><span>Hyzer</span></div></div>
+              <div class="metric-row"><div class="metric-top"><b>Release path</b><span class="metric-badge success">Level</span></div><div class="metric-scale"><i class="target"></i><i class="marker path-marker"></i></div><div class="metric-labels"><span>Down</span><span>Level</span><span>Up</span></div></div>
             </div>
             <div class="progress-card">
-              <p class="app-label">Progress</p><strong class="progress-context">Buzzz · RHBH · Straight</strong>
-              <h3>Target hits across your latest 10</h3><p class="app-copy">Filled bars show how many clear readings met each target.</p>
-              <div class="progress-metric"><b>Speed</b><div><span>Latest 10</span><i><em style="--fill:80%"></em></i><strong>8 of 10</strong></div><div class="previous"><span>Previous 10</span><i><em style="--fill:80%"></em></i><strong>8 of 10</strong></div></div>
-              <div class="progress-metric"><b>Disc angle</b><div><span>Latest 10</span><i><em style="--fill:70%"></em></i><strong>7 of 10</strong></div><div class="previous"><span>Previous 10</span><i><em style="--fill:50%"></em></i><strong>5 of 10</strong></div></div>
-              <div class="progress-metric"><b>Release path</b><div><span>Latest 10</span><i><em style="--fill:100%"></em></i><strong>10 of 10</strong></div><div class="previous"><span>Previous 10</span><i><em style="--fill:100%"></em></i><strong>10 of 10</strong></div></div>
+              <p class="app-label">Progress</p><strong class="progress-context">Firebird · RHBH · Straight</strong>
+              <h3>Target hits across your latest 5</h3><p class="app-copy">Filled bars show how many clear readings met each target.</p>
+              <div class="progress-metric"><b>Speed</b><div><span>Latest 5</span><i><em style="--fill:80%"></em></i><strong>4 of 5</strong></div><div class="previous"><span>Previous 5</span><i><em style="--fill:40%"></em></i><strong>2 of 5</strong></div></div>
+              <div class="progress-metric"><b>Disc angle</b><div><span>Latest 5</span><i><em style="--fill:80%"></em></i><strong>4 of 5</strong></div><div class="previous"><span>Previous 5</span><i><em style="--fill:40%"></em></i><strong>2 of 5</strong></div></div>
+              <div class="progress-metric"><b>Release path</b><div><span>Latest 5</span><i><em style="--fill:100%"></em></i><strong>5 of 5</strong></div><div class="previous"><span>Previous 5</span><i><em style="--fill:60%"></em></i><strong>3 of 5</strong></div></div>
             </div>
           </section>
         </div>
@@ -302,7 +302,16 @@
           <li><b>03</b><div><h3>Find the disc</h3><p>Move to a clear early-flight frame, center the disc, and tap Analyze.</p></div></li>
           <li><b>04</b><div><h3>Review and repeat</h3><p>Review the release and progress, then add another throw to the session.</p></div></li>
         </ol>
-        <figure class="phone finder-phone"><picture><img src="assets/find-disc.webp" alt="ThrowLab Find the Disc screen with a disc centered in early flight" width="600" height="1298" loading="lazy"></picture></figure>
+        <div class="app-preview finder-preview" aria-label="ThrowLab Find the Disc screen with a disc centered in early flight">
+          <section class="app-card finder-card">
+            <div class="finder-toolbar"><span class="finder-close">×</span><span class="finder-hint"><i>⌖</i> Drag to center the disc</span></div>
+            <header class="finder-heading"><h2>Find the disc</h2><ol><li><b>1.</b> Scrub to mid-flight and pinch to zoom</li><li><b>2.</b> Center the disc completely in the circle</li><li><b>3.</b> Tap Analyze</li></ol></header>
+            <div class="finder-video"><img src="assets/find-disc.webp" alt="Disc centered in an early-flight video frame" width="600" height="1298" loading="lazy"></div>
+            <div class="finder-scrub"><div><b>SCRUB</b><strong>3.00s</strong></div><span class="scrub-track"><i></i></span></div>
+            <div class="finder-nudge"><span>‹</span><b>Nudge frame</b><span>›</span></div>
+            <div class="finder-analyze">3. Analyze</div>
+          </section>
+        </div>
       </div>
     </section>
 

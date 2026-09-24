@@ -422,3 +422,104 @@ img{display:block;max-width:100%;height:auto}a{color:inherit}.shell{width:min(11
     width:100%;
   }
 }
+
+/* v57: simulator parity and mobile usability */
+.result-card .angle-marker{left:50%}
+.check-grid i{flex:none}
+[id]{scroll-margin-top:88px}
+
+@media(max-width:680px){
+  .app-preview{width:min(100%,360px)}
+  .check-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:7px;
+  }
+  .check-grid>span{
+    min-width:0;
+    min-height:44px;
+    gap:7px;
+    padding-inline:8px;
+    font-size:.64rem;
+    white-space:nowrap;
+  }
+  .result-card .app-card-heading p{
+    line-height:1.45;
+  }
+  .preview-actions{
+    gap:8px;
+  }
+  .nav-links a,
+  .footer-links a{
+    min-height:44px;
+    display:flex;
+    align-items:center;
+  }
+  .footer-links{
+    gap:4px 22px;
+  }
+  .consent-banner{
+    bottom:max(14px,env(safe-area-inset-bottom));
+  }
+  [id]{scroll-margin-top:76px}
+}
+
+@media(max-width:350px){
+  .check-grid>span{
+    gap:5px;
+    padding-inline:6px;
+    font-size:.59rem;
+  }
+}
+
+/* v58: responsive Find Disc recreation and 375px layout hardening */
+.finder-preview{width:min(100%,420px);justify-self:center}
+.finder-card{padding:17px}
+.finder-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#8fa3be}
+.finder-close{flex:none;width:34px;height:34px;display:grid;place-items:center;border:1px solid #214a78;border-radius:50%;color:#f0f6ff;font-size:1.35rem;line-height:1;background:#071224}
+.finder-hint{display:flex;align-items:center;justify-content:flex-end;gap:7px;min-width:0;font-size:.69rem;font-weight:650;text-align:right}
+.finder-hint i{color:#8fa3be;font-size:1rem;font-style:normal}
+.finder-heading{margin:15px 2px 13px}
+.finder-heading h2{margin:0 0 9px;text-align:center;font-size:1.45rem}
+.finder-heading ol{display:grid;gap:4px;margin:0;padding:0;list-style:none;color:#d6e0ef;font-size:.72rem;line-height:1.4}
+.finder-heading li{display:grid;grid-template-columns:22px 1fr;gap:4px}
+.finder-heading b{color:#438cff}
+.finder-video{position:relative;overflow:hidden;aspect-ratio:821/877;border:1px solid #214a78;border-radius:13px;background:#071224}
+.finder-video img{position:absolute;top:-58.25%;left:-4.88%;width:109.76%;max-width:none;height:auto;object-fit:initial}
+.finder-scrub{margin-top:12px}
+.finder-scrub>div{display:flex;align-items:center;justify-content:space-between;color:#8fa3be;font:750 .57rem ui-monospace,SFMono-Regular,Menlo,monospace}
+.finder-scrub strong{color:#438cff;font-size:.67rem}
+.scrub-track{position:relative;display:block;height:5px;margin:10px 2px 8px;border-radius:9px;background:#26344a}
+.scrub-track:before{content:"";position:absolute;left:0;top:0;width:42%;height:100%;border-radius:inherit;background:#438cff}
+.scrub-track i{position:absolute;left:42%;top:50%;width:24px;height:24px;border-radius:50%;background:#f0f6ff;transform:translate(-50%,-50%);box-shadow:0 2px 8px rgba(0,0,0,.28)}
+.finder-nudge{display:grid;grid-template-columns:42px 1fr 42px;align-items:center;gap:9px;margin-top:9px}
+.finder-nudge span{height:36px;display:grid;place-items:center;border:1px solid #214a78;border-radius:9px;background:#071224;color:#f0f6ff;font-size:1.7rem;line-height:1}
+.finder-nudge b{color:#8fa3be;font:600 .62rem ui-monospace,SFMono-Regular,Menlo,monospace;text-align:center}
+.finder-analyze{min-height:47px;display:grid;place-items:center;margin-top:13px;border-radius:11px;color:#fff;background:#3a82f5;font-size:.8rem;font-weight:800}
+
+@media(max-width:680px){
+  .finder-preview{width:min(100%,360px)}
+  .stat-row{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .stat-row div:last-child{
+    grid-column:1/-1;
+  }
+  .progress-metric>div{
+    grid-template-columns:minmax(58px,68px) minmax(70px,1fr) minmax(40px,44px);
+  }
+}
+
+@media(max-width:375px){
+  .app-card{padding:13px}
+  .metrics-panel,.progress-card{padding:12px}
+  .progress-metric>div{
+    grid-template-columns:58px minmax(58px,1fr) 40px;
+    gap:5px;
+    font-size:.52rem;
+  }
+  .progress-metric strong{white-space:nowrap}
+  .finder-card{padding:13px}
+  .finder-heading ol{font-size:.67rem}
+  .finder-hint{font-size:.62rem}
+  .finder-nudge{grid-template-columns:38px 1fr 38px}
+}
