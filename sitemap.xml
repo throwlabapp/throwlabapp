@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://throwlabapp.com/</loc>
@@ -24,4 +24,4 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-</urlset>
+<url><loc>https://throwlabapp.com/guides/record-disc-golf-throw/</loc></url><url><loc>https://throwlabapp.com/guides/understand-throw-results/</loc></url><url><loc>https://throwlabapp.com/guides/track-disc-golf-practice/</loc></url></urlset>
