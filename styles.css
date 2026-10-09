@@ -686,3 +686,16 @@ img{display:block;max-width:100%;height:auto}a{color:inherit}.shell{width:min(11
  .measure-list{margin:28px 0 26px}
  .clean-list{margin:26px 0;gap:14px}
 }
+
+/* Text precedes graphics on stacked layouts; desktop alternation stays intact. */
+@media(max-width:920px){
+ .hero-copy,.feature-grid>.feature-copy,.feature-grid.reverse>.feature-copy,
+ #sessions .progress-session-grid>.feature-copy,#how-it-works .workflow>.steps{order:0;min-width:0}
+ .hero-visual,.feature-grid>.app-preview,.feature-grid.reverse>.app-preview,
+ #sessions .progress-session-grid>.session-demo,#how-it-works .workflow>.finder-preview{order:1;min-width:0}
+ .hero-title{max-width:100%;font-size:clamp(1rem,6.4vw,2.6rem);white-space:normal;text-wrap:balance;overflow-wrap:break-word}
+ .hero-title span{white-space:normal}
+}
+@supports(font-size:1cqw){
+ @media(max-width:920px){.hero-title{font-size:clamp(1rem,7cqw,2.6rem)}}
+}
