@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=59">
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ThrowLab", "applicationCategory": "SportsApplication", "operatingSystem": "iOS", "url": "https://throwlabapp.com/", "downloadUrl": "https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743", "description": "Analyze your disc golf release from video, track throw distance with ThrowLab, follow practice progress, and compare estimated disc flight paths on iPhone.", "offers": [{"@type": "Offer", "name": "ThrowLab Pro monthly", "price": "4.99", "priceCurrency": "USD"}, {"@type": "Offer", "name": "ThrowLab Pro yearly", "price": "39.99", "priceCurrency": "USD"}], "image": "https://throwlabapp.com/assets/app-icon.png", "screenshot": ["https://throwlabapp.com/assets/analysis-v117.svg", "https://throwlabapp.com/assets/capture-v117.svg", "https://throwlabapp.com/assets/bag-v114.svg"], "featureList": ["Disc golf release analysis", "Speed, disc angle, and release path ratings", "Progress tracking by disc, style, and intended line", "Automatic practice sessions", "Milestones for dialed-in throws", "Estimated flight path comparison", "On-device video processing", "GPS throw distance tracking", "Distance goals, recorded bests, and average distance trends"]}
   </script>
@@ -53,6 +53,14 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WXPRTSX5');</script>
   <!-- End Google Tag Manager -->
+  <style>
+  /* Hero headline (mobile only): each sentence on one line, as large as fits */
+  @media (max-width:680px){
+    .hero-copy{container-type:inline-size}
+    .hero-title{--n:27;--char:.52;font-size:min(3.2rem,calc(100cqw / (var(--n) * var(--char))));line-height:1.1;white-space:nowrap;text-wrap:nowrap;max-width:100%}
+    .hero-title span{white-space:nowrap}
+  }
+  </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
