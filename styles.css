@@ -700,29 +700,3 @@ img{display:block;max-width:100%;height:auto}a{color:inherit}.shell{width:min(11
  @media(max-width:920px){.hero-title{font-size:clamp(1rem,7cqw,2.6rem)}}
 }
 
-/* Responsive hero copy; preserve the longer desktop headline. */
-.hero .hero-title .hero-desktop-line { color: inherit; }
-.hero .hero-title .hero-mobile-line { display: none; color: inherit; }
-@media (max-width: 680px) {
-  .hero h1.eyebrow {
-    font-size: .625rem;
-    line-height: 1.45;
-    letter-spacing: .1em;
-    margin-bottom: 16px;
-  }
-  .hero .hero-title .hero-desktop-line { display: none; }
-  .hero .hero-title .hero-mobile-line { display: inline; }
-  .hero .hero-title {
-    font-size: min(9.5vw, 2.75rem);
-    line-height: 1.12;
-    white-space: nowrap;
-    text-wrap: nowrap;
-    max-width: 100%;
-  }
-  .hero .hero-title span { white-space: nowrap; }
-}
-@supports (font-size: 1cqw) {
-  @media (max-width: 680px) {
-    .hero .hero-title { font-size: min(10.5cqw, 2.75rem); }
-  }
-}

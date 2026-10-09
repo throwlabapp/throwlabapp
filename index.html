@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=mobile-hero-3">
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ThrowLab", "applicationCategory": "SportsApplication", "operatingSystem": "iOS", "url": "https://throwlabapp.com/", "downloadUrl": "https://apps.apple.com/us/app/throwlab-disc-golf-analyzer/id6807089743", "description": "Analyze your disc golf release from video, track throw distance with ThrowLab, follow practice progress, and compare estimated disc flight paths on iPhone.", "offers": [{"@type": "Offer", "name": "ThrowLab Pro monthly", "price": "4.99", "priceCurrency": "USD"}, {"@type": "Offer", "name": "ThrowLab Pro yearly", "price": "39.99", "priceCurrency": "USD"}], "image": "https://throwlabapp.com/assets/app-icon.png", "screenshot": ["https://throwlabapp.com/assets/analysis-v117.svg", "https://throwlabapp.com/assets/capture-v117.svg", "https://throwlabapp.com/assets/bag-v114.svg"], "featureList": ["Disc golf release analysis", "Speed, disc angle, and release path ratings", "Progress tracking by disc, style, and intended line", "Automatic practice sessions", "Milestones for dialed-in throws", "Estimated flight path comparison", "On-device video processing", "GPS throw distance tracking", "Distance goals, recorded bests, and average distance trends"]}
   </script>
@@ -53,6 +53,19 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WXPRTSX5');</script>
   <!-- End Google Tag Manager -->
+<style id="responsive-hero-copy">
+.hero .hero-title .hero-desktop-line { color: #f4f7fd; }
+.hero .hero-title .hero-mobile-line { display: none; color: #f4f7fd; }
+@media (max-width: 680px) {
+  .hero h1.eyebrow { font-size: .625rem; line-height: 1.45; letter-spacing: .1em; margin-bottom: 16px; }
+  .hero .hero-copy { width: 100%; }
+  .hero .hero-title .hero-desktop-line { display: none; }
+  .hero .hero-title .hero-mobile-line { display: inline; color: #f4f7fd; }
+  .hero .hero-title { font-size: min(10vw, 44px); line-height: 1.12; white-space: nowrap; text-wrap: nowrap; max-width: 100%; }
+  .hero .hero-title span { white-space: nowrap; }
+  .hero .hero-title .hero-accent-line { color: #91c0ff; }
+}
+</style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -101,7 +114,7 @@
     <section class="hero shell">
       <div class="hero-copy">
         <h1 class="eyebrow">Disc golf analyzer app for iPhone</h1>
-        <p class="hero-title"><span class="hero-desktop-line">Analyze your disc’s flight.</span><span class="hero-mobile-line">Analyze your flight.</span><br><span>Dial in your throw.</span></p>
+        <p class="hero-title"><span class="hero-desktop-line">Analyze your disc’s flight.</span><span class="hero-mobile-line">Analyze your flight.</span><br><span class="hero-accent-line">Dial in your throw.</span></p>
         <p class="hero-lead">See how your angle, speed, and release path fit your disc, style, and intended line. Track your distance, target hits, and bests. Turn practice into progress.</p>
         <div class="hero-actions">
           <div class="store-cta">
