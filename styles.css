@@ -699,3 +699,19 @@ img{display:block;max-width:100%;height:auto}a{color:inherit}.shell{width:min(11
 @supports(font-size:1cqw){
  @media(max-width:920px){.hero-title{font-size:clamp(1rem,7cqw,2.6rem)}}
 }
+
+/* Hero headline (mobile only): each sentence on one line, as large as fits.
+   Longest sentence: "Analyze your disc’s flight." = 27 characters. */
+@media (max-width: 680px) {
+  .hero-copy { container-type: inline-size; }
+  .hero-title {
+    --n: 27;
+    --char: 0.52; /* avg glyph width (em); raise if clipping, lower if spare room */
+    font-size: min(3.2rem, calc(100cqw / (var(--n) * var(--char))));
+    line-height: 1.1;
+    white-space: nowrap;
+    text-wrap: nowrap;
+    max-width: 100%;
+  }
+  .hero-title span { white-space: nowrap; }
+}
