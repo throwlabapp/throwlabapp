@@ -700,3 +700,32 @@ img{display:block;max-width:100%;height:auto}a{color:inherit}.shell{width:min(11
  @media(max-width:920px){.hero-title{font-size:clamp(1rem,7cqw,2.6rem)}}
 }
 
+
+/* Build 20: compact Trends graphic and deterministic desktop alternation. */
+#trends .trends-preview{width:min(100%,320px);max-width:320px;padding:0;border:0;background:none;box-shadow:none}
+@media(min-width:921px){
+ #main .feature-showcase.visual-left>.feature-grid,
+ #main .feature-showcase.visual-left>.progress-session-grid,
+ #main .feature-showcase.visual-left>.workflow{grid-template-columns:minmax(300px,410px) minmax(0,1fr)}
+ #main .feature-showcase.visual-right>.feature-grid,
+ #main .feature-showcase.visual-right>.progress-session-grid,
+ #main .feature-showcase.visual-right>.workflow{grid-template-columns:minmax(0,1fr) minmax(300px,410px)}
+ #main .feature-showcase>.feature-grid>*,
+ #main .feature-showcase>.progress-session-grid>*,
+ #main .feature-showcase>.workflow>*{grid-column:auto;grid-row:auto;align-self:center}
+ #main .feature-showcase.visual-left .app-preview,
+ #main .feature-showcase.visual-left .session-demo,
+ #main .feature-showcase.visual-left .finder-preview{order:0;justify-self:start}
+ #main .feature-showcase.visual-left .feature-copy,
+ #main .feature-showcase.visual-left .steps{order:1;justify-self:end}
+ #main .feature-showcase.visual-right .app-preview,
+ #main .feature-showcase.visual-right .session-demo,
+ #main .feature-showcase.visual-right .finder-preview{order:1;justify-self:end}
+ #main .feature-showcase.visual-right .feature-copy,
+ #main .feature-showcase.visual-right .steps{order:0;justify-self:start}
+}
+@media(max-width:920px){#trends .trends-preview{justify-self:center}}
+
+/* Capture setup now illustrates How it works. */
+#how-it-works .capture-preview{width:min(100%,360px);max-width:360px}
+@media(max-width:920px){#how-it-works .capture-preview{justify-self:center;order:1}#how-it-works .steps{order:0}}
