@@ -747,20 +747,10 @@ img{display:block;max-width:100%;height:auto}a{color:inherit}.shell{width:min(11
 #main .app-preview:has(.source-preview),#main .session-demo:has(.source-preview){padding:0;border:0;box-shadow:none;background:transparent;outline:0}
 #sessions .source-preview{border-radius:18px}
 
-/* Product screens: consistent exterior frame, rim light and ambient depth. */
-#main .app-preview:has(.source-preview),#main .session-demo:has(.source-preview){
- position:relative;isolation:isolate;padding:9px;border:1px solid #405575;
- border-radius:29px;background:linear-gradient(145deg,#24364e,#080f1c 45%,#172b43);
- box-shadow:0 28px 65px -22px #000b,0 0 0 1px #020711, inset 0 1px 0 #8298b54d;
-}
-#main .app-preview:has(.source-preview)::before,#main .session-demo:has(.source-preview)::before{
- content:"";position:absolute;z-index:-1;inset:-38px;border-radius:70px;pointer-events:none;
- background:radial-gradient(ellipse at 25% 30%,#2185f52b,transparent 66%),radial-gradient(ellipse at 80% 80%,#21d4ed18,transparent 63%);
- filter:blur(17px);
-}
-#main .source-preview{display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 0 0 1px #020914;}
-.event-phones img{border:6px solid #152338;border-radius:25px;box-shadow:0 18px 45px #0006,0 0 30px #2185f518}
-@media(max-width:680px){#main .app-preview:has(.source-preview),#main .session-demo:has(.source-preview){padding:7px;border-radius:27px}}
+/* SVG artwork supplies its own edge; keep the surrounding surface clean. */
+#main .source-preview{border:0;border-radius:0;box-shadow:none}
+#main .app-preview:has(.source-preview),#main .session-demo:has(.source-preview){padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+#main .app-preview:has(.source-preview)::before,#main .session-demo:has(.source-preview)::before{content:none}
 
 /* Keep both mobile headline lines inside narrow screens. */
 @media(max-width:680px){.hero .hero-title{font-size:clamp(24px,8.5vw,40px);line-height:1.15}}
