@@ -1,7 +1,7 @@
 {
   "name": "ThrowLab",
   "short_name": "ThrowLab",
-  "description": "Disc golf release analysis for iPhone",
+  "description": "Disc golf flight and distance analysis for iPhone",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#050b18",

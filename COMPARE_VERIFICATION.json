@@ -1,0 +1,9 @@
+{
+  "reference_archive": "ThrowLab-website-Cloudflare-Worker-Consistency-Checked.zip",
+  "restoration": "byte-for-byte",
+  "controls_allowed": [
+    "Capture",
+    "Compare"
+  ],
+  "other_graphics_unchanged": true
+}

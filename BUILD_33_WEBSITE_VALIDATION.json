@@ -1,0 +1,18 @@
+{
+  "graphics_mode": "Controls on Capture and Compare only",
+  "capture_unchanged": true,
+  "controls_removed_from_other_graphics": true,
+  "sessions_width": 360,
+  "sessions_svg_height": 544,
+  "flight_only_sessions": true,
+  "feature_graphics_rendered": 8,
+  "html_pages_checked": 11,
+  "faq_answers_matched": 12,
+  "deployed": false,
+  "approved_graphics_unchanged": true,
+  "final_language_review": true,
+  "compare_restored_from_earlier_archive": true,
+  "compare_chart_content_unchanged": true,
+  "compare_controls": true,
+  "compare_exact_earlier_asset_restored": true
+}

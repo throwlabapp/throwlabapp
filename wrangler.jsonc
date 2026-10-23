@@ -1,0 +1,16 @@
+{
+  "name": "throwlabapp",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-21",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "throwlab-signups",
+    "database_id": "afc5ecba-133b-4a90-8262-7c9566dfb38d",
+    "migrations_dir": "migrations"
+  }]
+}
