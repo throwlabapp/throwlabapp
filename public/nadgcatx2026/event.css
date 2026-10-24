@@ -103,11 +103,11 @@ body.kiosk .event-bonus .bonus-detail{display:none}
  .event-copy{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
  .event-copy>.eyebrow{margin-top:0}
  .event-copy h1{margin-top:14px}
- .event-phones{width:100%;max-width:440px;margin-top:auto;padding-top:28px}
+ .event-phones{width:100%;max-width:440px;margin-top:24px;padding-top:0}
  .event-caption{margin-top:16px;margin-bottom:0}
  .signup-card{width:100%;max-width:400px;justify-self:end}
  body.kiosk .event-grid{align-items:stretch}
- body.kiosk .event-phones{max-width:420px;margin-top:auto}
+ body.kiosk .event-phones{max-width:420px;margin-top:24px}
 }
 @media(min-width:761px) and (max-width:1000px) and (orientation:landscape){
  .event-grid{grid-template-columns:minmax(0,1fr) minmax(0,370px);gap:28px}
@@ -121,3 +121,28 @@ body.kiosk .event-bonus .bonus-detail{display:none}
  .signup-card{width:100%;max-width:560px;justify-self:center}
 }
 @media(min-width:1001px){.event-phones,body.kiosk .event-phones{max-width:480px}}
+
+/* Keep the introduction and artwork together with natural spacing. */
+@media(min-width:761px){
+ .event-copy{justify-content:flex-start}
+ .event-phones,body.kiosk .event-phones{margin-top:24px;padding-top:0;max-width:480px}
+ .signup-card h2{margin-top:0}
+}
+.signup-card>.eyebrow,.event-bonus .bonus-detail{display:none}
+.signup-card .offer-note{margin-top:16px}
+@media(min-width:600px) and (max-width:1000px) and (orientation:portrait){
+ .event-phones,body.kiosk .event-phones{margin:0;max-width:none;padding:0}
+}
+@media(min-width:1001px){.event-phones,body.kiosk .event-phones{max-width:none}}
+
+/* One readable Trends image, centered beneath the introduction. */
+.event-phones,body.kiosk .event-phones{display:block;width:min(100%,280px);max-width:280px;margin:24px auto 0;padding:0}
+.event-phones img{width:100%;height:auto;display:block}
+@media(min-width:1001px){.event-phones,body.kiosk .event-phones{width:280px;max-width:280px}}
+@media(min-width:600px) and (max-width:1000px) and (orientation:portrait){
+ .event-copy{display:block}
+ .event-copy h1{margin:12px 0}
+ .event-copy .event-lead{max-width:100%}
+ .event-phones,body.kiosk .event-phones{width:240px;max-width:240px;margin:24px auto 0}
+}
+@media(max-width:599px){.event-phones,body.kiosk .event-phones{width:220px;max-width:220px}}
