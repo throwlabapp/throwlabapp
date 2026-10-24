@@ -1,15 +1,7 @@
 .event-page{min-height:100vh;background:#080f1c;color:#f0f6ff}
 .event-page *{box-sizing:border-box}
-.event-page .shell{width:calc(100% - 64px);max-width:1160px;margin-inline:auto}
-.event-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:28px}
 .event-nav>span{color:#a8bacd;font-size:13px;letter-spacing:.08em;white-space:nowrap}
-.event-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:64px;align-items:start;padding-block:28px 48px}
-.event-copy h1{font-size:clamp(34px,3.3vw,44px);line-height:1.12;letter-spacing:-.045em;margin:14px 0 20px}
 .tagline-accent{color:#83b8ff}
-.event-lead{font-size:18px;line-height:1.6;color:#bcc9da;max-width:440px;margin:0}
-.event-phones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:440px;margin-top:30px;align-items:start}
-.event-phones img{display:block;width:100%;height:auto;aspect-ratio:1592/3106;object-fit:contain;object-position:top;border:0;border-radius:0;box-shadow:none;outline:0}
-.event-caption{font-size:12px;line-height:1.6;color:#91a5be;margin:16px 0 0}
 .signup-card{min-width:0;background:#101b2b;border:1px solid #25364b;border-radius:20px;padding:30px}
 .signup-card h2{font-size:clamp(28px,2.6vw,36px);line-height:1.16;margin:12px 0 14px;letter-spacing:-.035em;max-width:340px}
 .signup-card p{color:#bcc9da;line-height:1.6;margin:0 0 16px}
@@ -37,48 +29,69 @@
 #success h3{font-size:26px;margin:6px 0 14px}
 .event-footer{display:flex;justify-content:space-between;gap:20px;padding-block:20px 30px;color:#91a5be;font-size:12px;border-top:1px solid #1c2b3d}
 [hidden]{display:none!important}
-@media(max-width:1000px){.event-grid{gap:32px}.signup-card{padding:24px}.event-copy h1{font-size:40px}.event-phones{gap:14px}}
-@media(max-width:760px){.event-page .shell{width:calc(100% - 40px);max-width:520px}.event-nav{padding-block:22px}.event-grid{grid-template-columns:minmax(0,1fr);gap:30px;padding-block:14px 32px}.event-copy h1{font-size:clamp(30px,7.6vw,42px)}.event-lead{font-size:17px}.event-phones{max-width:340px;gap:16px;margin:24px auto 0}.event-caption{text-align:center}.signup-card{padding:24px}.signup-card h2{font-size:30px;max-width:none}.event-footer{flex-direction:column;gap:8px}}
-@media(max-width:360px){.event-page .shell{width:calc(100% - 28px)}.signup-card{padding:20px}.event-nav>span{font-size:11px}.event-bonus .bonus-price{font-size:18px}.event-bonus .bonus-price strong{font-size:25px}}
-body.kiosk .event-footer{display:none}
 
-/* Compact artwork and a consistent, form-first tablet layout. */
-.event-page .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;font-weight:700}
-.event-page .eyebrow{color:#53d4ed;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+/* ---- Layout: built for iPad Pro (11" and 13", portrait + landscape), scales down to phones ---- */
+.event-page{display:flex;flex-direction:column;min-height:100vh;min-height:100svh;background:radial-gradient(900px 600px at 18% 38%,rgba(40,110,220,.14),transparent 70%),radial-gradient(700px 500px at 88% 10%,rgba(36,213,238,.07),transparent 70%),#080f1c}
+.event-page .shell{width:calc(100% - 96px);max-width:1360px;margin-inline:auto}
+.event-page .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;font-weight:700;font-size:22px}
+.event-page .eyebrow{color:#53d4ed;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0}
 .event-page a{color:inherit}
-.event-grid{grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:64px;align-items:start}
-.event-copy h1{font-size:clamp(30px,3.2vw,42px)}
-.event-phones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;max-width:320px;gap:16px;margin:28px 0 0;align-items:start}
-.event-phones img{width:100%;height:auto;aspect-ratio:1592/3106;object-fit:contain;object-position:top}
+.event-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:30px 8px}
+.event-nav>span{color:#a8bacd;font-size:14px;letter-spacing:.1em;white-space:nowrap}
+.event-grid{flex:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(400px,460px);gap:clamp(40px,5.5vw,88px);align-items:center;padding-block:20px 36px}
+.event-copy{min-width:0}
+.event-copy h1{font-size:clamp(38px,4.3vw,62px);line-height:1.08;letter-spacing:-.045em;margin:16px 0 20px}
+.event-lead{font-size:clamp(18px,1.6vw,22px);line-height:1.55;color:#bcc9da;max-width:520px;margin:0}
+/* phone size follows available height so both phones fit on one iPad screen */
+.event-phones{--pw:clamp(190px,calc((100svh - 540px)*.5125),340px);display:flex;align-items:flex-start;gap:clamp(18px,2.2vw,30px);margin:clamp(24px,3.5vh,44px) 0 0;width:max-content;max-width:100%;padding-bottom:calc(var(--pw)*.2)}
+.event-phones img{display:block;width:var(--pw);height:auto;aspect-ratio:1592/3106;object-fit:contain;object-position:top;border:0;border-radius:0;box-shadow:none;outline:0;filter:drop-shadow(0 26px 40px rgba(0,0,0,.55))}
+.event-phones img+img{margin-top:calc(var(--pw)*.2);--lift:0}
+.signup-card{min-width:0;padding:clamp(28px,2.6vw,38px);border-radius:24px;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.signup-card h2{font-size:clamp(30px,2.9vw,40px);line-height:1.14;margin:0 0 14px;max-width:380px}
 .signup-card>.eyebrow,.event-bonus .bonus-detail{display:none}
-.signup-card h2{margin-top:0}
-body.kiosk{min-height:100svh}
-body.kiosk .event-nav .brand{pointer-events:none}
+.signup-card p{font-size:16px}
+.event-bonus .bonus-price{font-size:22px}
+.signup-card input:not([type=checkbox]){min-height:56px;font-size:17px}
+.signup-card .consent-check{font-size:13px}
+.consent-check input{width:24px;height:24px}
+.signup-card .button{min-height:58px;font-size:18px}
+.signup-card .offer-note{font-size:12px}
+.privacy-link{font-size:13px}
+.event-footer{display:flex;justify-content:space-between;gap:20px;padding-block:20px 28px;border-top:1px solid #1c2b3d;color:#91a5be;font-size:13px}
 body.kiosk .event-footer{display:none}
-@media(min-width:761px) and (max-width:1180px){
- .event-page .shell{width:calc(100% - 48px)}
- .event-nav{padding-block:22px}
- .event-grid{grid-template-columns:minmax(0,1fr) minmax(0,380px);gap:36px;padding-block:16px 28px}
- .event-copy h1{font-size:clamp(30px,3.5vw,38px)}
- .event-lead{font-size:17px;line-height:1.55}
- .event-phones{max-width:290px;gap:14px}
- .signup-card{padding:26px}
- .signup-card h2{font-size:30px}
- .signup-card input:not([type=checkbox]){min-height:52px}
- .signup-card .button{min-height:54px}
+body.kiosk .event-nav .brand{pointer-events:none}
+
+/* iPad Pro 11" landscape (1194x834): tighter vertical rhythm */
+@media(min-width:1000px) and (max-height:900px){
+ .event-nav{padding-block:20px 0}
+ .event-grid{padding-block:10px 20px}
+ .event-copy h1{margin:12px 0 14px}
+ .event-phones{--pw:clamp(170px,calc((100svh - 420px)*.5125),340px);margin-top:20px}
 }
-@media(max-width:760px){
- .event-grid{grid-template-columns:minmax(0,1fr);gap:28px}
- .event-copy h1{font-size:clamp(30px,7.6vw,40px)}
- .event-phones{max-width:250px;gap:14px;margin:24px 0 0}
- .signup-card{width:100%;max-width:520px}
+
+/* Portrait iPad / narrower: copy + phones side by side, form full-width below */
+@media(max-width:999px),(orientation:portrait){
+ .event-page .shell{width:calc(100% - 64px)}
+ .event-grid{grid-template-columns:minmax(0,1fr);gap:36px;align-items:start;padding-block:16px 36px}
+ .event-copy{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto auto;align-content:center;column-gap:clamp(24px,4vw,48px);align-items:center}
+ .event-copy>.eyebrow{grid-column:1;grid-row:1;align-self:end}.event-copy h1{margin:12px 0 14px}
+ .event-copy h1{grid-column:1;grid-row:2;font-size:clamp(38px,5.6vw,52px);margin:14px 0 16px}
+ .event-copy .event-lead{grid-column:1;grid-row:3;align-self:start}
+ .event-phones{--pw:clamp(180px,22vw,250px);grid-column:2;grid-row:1/4;margin:0}
+ .signup-card{width:100%;max-width:680px;justify-self:center;padding:34px}
+ .signup-card h2{max-width:none}
 }
-@media(min-width:761px) and (max-width:900px) and (orientation:portrait){
- .event-grid{grid-template-columns:minmax(0,1fr);gap:28px}
- .event-copy{display:grid;grid-template-columns:minmax(0,1fr) 190px;column-gap:24px;align-items:start}
- .event-copy>.eyebrow{grid-column:1;grid-row:1;margin-top:0}
- .event-copy h1{grid-column:1;grid-row:2;font-size:32px;margin:8px 0 14px}
- .event-copy .event-lead{grid-column:1;grid-row:3}
- .event-phones{grid-column:2;grid-row:1 / 4;width:190px;max-width:190px;gap:10px;margin:0}
- .signup-card{width:100%;max-width:560px;justify-self:center}
+
+/* Phones */
+@media(max-width:620px){
+ .event-page .shell{width:calc(100% - 36px)}
+ .event-nav{padding-block:20px 4px}
+ .event-copy{display:block}
+ .event-copy h1{font-size:clamp(32px,9vw,42px)}
+ .event-lead{font-size:17px}
+ .event-phones{--pw:min(38vw,170px);margin:24px auto 0}
+ .signup-card{padding:24px}
+ .signup-card h2{font-size:28px}
+ .event-footer{flex-direction:column;gap:8px}
 }
+@media(max-width:360px){.event-page .shell{width:calc(100% - 28px)}.signup-card{padding:20px}.event-nav>span{font-size:11px}.event-bonus .bonus-price{font-size:18px}.event-bonus .bonus-price strong{font-size:25px}}
