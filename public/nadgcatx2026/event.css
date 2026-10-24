@@ -39,8 +39,8 @@
 .event-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:30px 8px}
 .event-nav>span{color:#a8bacd;font-size:14px;letter-spacing:.1em;white-space:nowrap}
 .event-grid{flex:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(400px,460px);gap:clamp(40px,5.5vw,88px);align-items:center;padding-block:20px 36px}
-.event-copy{min-width:0}
-.event-copy h1{font-size:clamp(38px,4.3vw,62px);line-height:1.08;letter-spacing:-.045em;margin:16px 0 20px}
+.event-copy{min-width:0;container-type:inline-size}
+.event-copy h1{font-size:clamp(26px,3.7vw,60px);font-size:clamp(26px,7.7cqw,62px);line-height:1.08;letter-spacing:-.045em;margin:16px 0 20px;white-space:nowrap}
 .event-lead{font-size:clamp(18px,1.6vw,22px);line-height:1.55;color:#bcc9da;max-width:520px;margin:0}
 /* phone size follows available height so both phones fit on one iPad screen */
 .event-phones{--pw:clamp(190px,calc((100svh - 540px)*.5125),340px);display:flex;align-items:flex-start;gap:clamp(18px,2.2vw,30px);margin:clamp(24px,3.5vh,44px) 0 0;width:max-content;max-width:100%;padding-bottom:calc(var(--pw)*.2)}
@@ -69,15 +69,31 @@ body.kiosk .event-nav .brand{pointer-events:none}
  .event-phones{--pw:clamp(170px,calc((100svh - 420px)*.5125),340px);margin-top:20px}
 }
 
-/* Portrait iPad / narrower: copy + phones side by side, form full-width below */
-@media(max-width:999px),(orientation:portrait){
+/* iPad Pro 13" portrait (1024 wide): keep two columns, no stacking */
+@media(min-width:900px) and (orientation:portrait){
+ .event-page .shell{width:calc(100% - 64px)}
+ .event-grid{grid-template-columns:minmax(0,1fr) 400px;gap:36px}
+ .event-copy h1{font-size:4.1vw}
+ .event-phones{--pw:calc((100vw - 64px - 400px - 36px - 22px)/2);gap:22px;padding-bottom:calc(var(--pw)*.2)}
+ .event-lead{font-size:22px}
+ .signup-card{padding:40px 34px}
+ .signup-card h2{font-size:38px;margin-bottom:18px}
+ .event-bonus{margin-block:28px!important}
+ .signup-card input:not([type=checkbox]){min-height:64px}
+ .signup-card .button{min-height:66px}
+ .signup-card form>label{margin-top:24px}
+ .signup-card .consent-check{margin-block:26px}
+}
+
+/* Narrower than 900px (11" portrait, small tablets): form drops below, headline stays on one line */
+@media(max-width:899px){
  .event-page .shell{width:calc(100% - 64px)}
  .event-grid{grid-template-columns:minmax(0,1fr);gap:36px;align-items:start;padding-block:16px 36px}
- .event-copy{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto auto;align-content:center;column-gap:clamp(24px,4vw,48px);align-items:center}
- .event-copy>.eyebrow{grid-column:1;grid-row:1;align-self:end}.event-copy h1{margin:12px 0 14px}
- .event-copy h1{grid-column:1;grid-row:2;font-size:clamp(38px,5.6vw,52px);margin:14px 0 16px}
- .event-copy .event-lead{grid-column:1;grid-row:3;align-self:start}
- .event-phones{--pw:clamp(180px,22vw,250px);grid-column:2;grid-row:1/4;margin:0}
+ .event-copy{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:clamp(24px,4vw,48px);align-items:start}
+ .event-copy>.eyebrow{grid-column:1/-1;grid-row:1}
+ .event-copy h1{grid-column:1/-1;grid-row:2;font-size:clamp(30px,6.4vw,52px);margin:12px 0 18px}
+ .event-copy .event-lead{grid-column:1;grid-row:3}
+ .event-phones{--pw:clamp(150px,22vw,220px);grid-column:2;grid-row:3;margin:0}
  .signup-card{width:100%;max-width:680px;justify-self:center;padding:34px}
  .signup-card h2{max-width:none}
 }
@@ -87,7 +103,8 @@ body.kiosk .event-nav .brand{pointer-events:none}
  .event-page .shell{width:calc(100% - 36px)}
  .event-nav{padding-block:20px 4px}
  .event-copy{display:block}
- .event-copy h1{font-size:clamp(32px,9vw,42px)}
+ .event-phones{justify-self:auto}
+ .event-copy h1{font-size:clamp(22px,7.6cqw,42px)}
  .event-lead{font-size:17px}
  .event-phones{--pw:min(38vw,170px);margin:24px auto 0}
  .signup-card{padding:24px}
