@@ -44,7 +44,7 @@ assert round(sum(data['speed'][:-1])/9)==55 and data['speed'][-1]==59
 assert sum(data['bank'][:-1])/9==-1 and data['bank'][-1]==1
 assert sum(data['path'][:-1])/9==3 and data['path'][-1]==2
 assert '8° flat' in (p/'assets/Flight_Analysis-phone.svg').read_text()
-assert '8° anhyzer' not in (p/'assets/Flight_Analysis-phone.svg').read_text()
+assert '8° down' not in (p/'assets/Flight_Analysis-phone.svg').read_text()
 assert not re.search(r'\d+ ft', (p/'assets/Sessions-phone.svg').read_text())
 assert '120 fps' not in ''.join(f.read_text() for f in files)
 assert scans[p/'index.html'].h1==1
