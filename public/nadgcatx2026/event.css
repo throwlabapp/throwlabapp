@@ -38,3 +38,13 @@
 .signup-card h1{max-width:none}
 @media(max-width:620px){.signup-card{padding:24px}.signup-card h1{font-size:28px}}
 @media(max-width:360px){.signup-card{padding:20px}}
+
+/* Signup comes first; visitors can browse the usual site navigation. */
+.event-page .event-grid{margin:0 auto;padding:36px 0 48px}
+.event-copy{width:calc(100% - 40px);max-width:760px;margin:0 auto;padding:40px 0 64px;border-top:1px solid #25364b;text-align:center}
+.event-copy h2{font-size:clamp(30px,5vw,48px);line-height:1.12;letter-spacing:-.035em;margin:14px 0 20px}
+.event-lead{max-width:540px;margin:0 auto;color:#bcc9da;font-size:18px;line-height:1.6}
+.event-phones{display:flex;justify-content:center;align-items:flex-start;gap:24px;max-width:100%;margin:32px auto 0;padding-bottom:40px}
+.event-phones img{display:block;width:calc(50% - 12px);max-width:250px;height:auto;filter:drop-shadow(0 18px 28px rgba(0,0,0,.3))}
+.event-phones img+img{margin-top:40px}
+@media(max-width:620px){.event-page .event-grid{padding-top:24px}.event-phones{gap:16px}.event-phones img{width:calc(50% - 8px)}}
