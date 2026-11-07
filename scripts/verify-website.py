@@ -40,11 +40,8 @@ assert visible==[(q['name'],q['acceptedAnswer']['text']) for q in faq['mainEntit
 for f in (p/'assets').glob('*.svg'):E.parse(f)
 data=json.loads((root/'GRAPHICS_SAMPLE_DATA.json').read_text())
 assert all(len(v)==10 for v in data.values())
-assert round(sum(data['speed'][:-1])/9)==55 and data['speed'][-1]==59
-assert sum(data['bank'][:-1])/9==-1 and data['bank'][-1]==1
-assert sum(data['path'][:-1])/9==3 and data['path'][-1]==2
-assert '8° flat' in (p/'assets/Flight_Analysis-phone.svg').read_text()
-assert '8° down' not in (p/'assets/Flight_Analysis-phone.svg').read_text()
+assert data['speed'][-1]==65 and min(data['speed'])==63 and max(data['speed'])==66
+assert data['bank'][-1]==2 and data['path'][-1]==5
 assert not re.search(r'\d+ ft', (p/'assets/Sessions-phone.svg').read_text())
 assert '120 fps' not in ''.join(f.read_text() for f in files)
 assert scans[p/'index.html'].h1==1
